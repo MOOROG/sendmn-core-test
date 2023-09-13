@@ -1,0 +1,1 @@
+ALTER TABLE agentMaster ADD branchCode VARCHAR(3), maxValue INT

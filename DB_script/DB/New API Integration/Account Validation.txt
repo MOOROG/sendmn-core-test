@@ -1,0 +1,10 @@
+China:
+{"IdType":"1","IdNumber":"95","CustomerFirstName":"AMRIT","CustomerLastName":"GIRI","ReceiverFirstName":"Su Li","ReceiverLastName":"Zhuang","ReceiverCountryId":45,"Country":"CN","BankId":2563,"DeliveryMethodId":13,"ProcessId":"9c549d6b-32af-44a8-9d65-be77811ebc4a","AccountNo":"8613310113131","Amount":"10000.0","AccountType":"1","IssuerCode":"EWALIPAY","BankCode":"EWALIPAY","PayoutPartner":"394450"}
+
+Philippines:
+{"IdType":"1","IdNumber":"95","CustomerFirstName":"AMRIT","CustomerLastName":"GIRI","ReceiverFirstName":"Sheok Chin","ReceiverLastName":"Lau"
+,"ReceiverCountryId":174,"Country":"PH","BankId":2563,"DeliveryMethodId":2,"ProcessId":"9c549d6b-32af-44a8-9d65-be77811ebc4a","AccountNo":"000990000666","Amount":"10000.0"
+,"AccountType":"1","IssuerCode":"63053","BankCode":"63053","PayoutPartner":"394450"}
+
+China Union Pay: Card Payment
+{"IdType":"1","IdNumber":"95","CustomerFirstName":"AMRIT","CustomerLastName":"GIRI","ReceiverFirstName":"NATALIE","ReceiverLastName":"CHAN","ReceiverCountryId":45,"Country":"CN","BankId":2689,"DeliveryMethodId":2,"ProcessId":"9e94e9e0-c851-4651-8513-fb0abfccf630","Amount":"10000.0","AccountNo":"6210810222211110000","AccountType":"1","IssuerCode":"8600067","BankCode":"8600067","PayoutPartner":"394450","UserName":null,"ProviderId":"394450","SessionId":null,"PBranch":null,"RequestFrom":null,"password":null}

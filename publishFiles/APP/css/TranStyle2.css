@@ -1,0 +1,355 @@
+﻿.unpaidACdeposit table {
+    border: 0px solid black;
+    width: 900px;
+}
+
+
+
+.unpaidACdeposit th {
+    font-size: 12px;
+    color: white;
+    background-color: #606060;
+    text-align: left;
+    border-color: #DEDEDE
+}
+
+    .unpaidACdeposit th a {
+        color: white;
+    }
+
+.unpaidACdeposit div {
+    font-size: 11px;
+    color: Black;
+}
+
+.unpaidACdeposit td {
+    font-size: 11px;
+    color: Black;
+    text-align: left;
+}
+
+.DisFond {
+    font-size: 17px;
+    color: Red;
+    background-color: #F9CCCC;
+    padding: 5px;
+}
+
+.trnLog table {
+    border: 0px solid black;
+    width: 820px;
+}
+
+.trnLog th {
+    font-size: 12px;
+    color: white;
+    background-color: #606060;
+    text-align: left;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #DEDEDE;
+}
+
+    .trnLog th a {
+        color: white;
+    }
+
+.trnLog td {
+    font-size: 11px;
+    color: Black;
+    text-align: left;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+}
+
+    .trnLog td a {
+        color: blue;
+    }
+
+        .trnLog td a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+.openPopup {
+    cursor: pointer;
+    color: Blue;
+    font-weight: bold;
+    font-size: 10px;
+    width: 600px;
+    border: 0 0 0 0;
+    background: #f2f2f2;
+}
+
+.link {
+    cursor: pointer;
+    color: Blue;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.buttons {
+    width: 400px;
+    float: left;
+    margin-top: -5px;
+}
+
+.grid-div {
+    margin-left: 20px;
+    overflow: scroll;
+    height: 180px;
+    width: 920px;
+    border: 1px solid grey;
+}
+
+.right-pane {
+    margin-left: 10px;
+    overflow: scroll;
+    height: 180px;
+    width: 500px;
+    border: 1px solid grey;
+}
+
+.panels {
+    /*background:#f2f2f2;*/
+    font-size: 11px;
+    /*border:1px solid #000000; */
+    margin-bottom: 5px;
+    width: 100%;
+    /*height: 171px;*/
+}
+
+.dialogBox {
+    background: #f2f2f2;
+    font-size: 11px;
+    border: 1px solid #000000;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    width: 497px;
+}
+
+    .dialogBox.td {
+        background: #f2f2f2;
+        font-size: 11px;
+        border: 1px solid #000000;
+        margin-bottom: 5px;
+        margin-left: 20px;
+    }
+
+.panels2 {
+    /*background:#f2f2f2;*/
+    font-size: 11px;
+    /*border:1px solid #fff; */
+    border-color: #f2f2e6 #666661 #666661 #f2f2e6;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 15px;
+}
+
+.headers {
+    /* margin-left:20px;*/
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
+}
+
+.controlNoDis {
+    margin-left: 20px;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    clear: both;
+    background: red;
+    font-weight: bold;
+    color: White;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tranNoDis {
+    margin-left: 30px;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    clear: both;
+    background: red;
+    font-weight: bold;
+    color: White;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tranStatusDis {
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    clear: both;
+    background: red;
+    font-weight: bold;
+    color: White;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.HighLightText {
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    clear: both;
+    background: red;
+    font-weight: bold;
+    color: White;
+    padding: 2px;
+}
+
+.headers-2 {
+    margin-left: 30px;
+    font-family: Verdana;
+    font-size: small;
+    font-weight: bold;
+    clear: both;
+}
+
+.tg-button {
+    float: right;
+    cursor: pointer;
+    width: 28px;
+    font-size: small;
+    margin-top: -10px;
+    margin-right: -10px;
+    float: right;
+    border: 0 0 0 0;
+    background: #f2f2f2
+}
+
+.form-label {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.form-ddl {
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.form-text-box {
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.blank-div {
+    margin-left: 5px;
+    font-size: 13px;
+    float: left;
+    xbackground-color: pink;
+}
+
+.left-pane {
+    margin-left: 5px;
+    float: left;
+    width: 700px;
+    background-color: pink;
+}
+
+.tableForm .label {
+    text-align: left;
+    width: 150px;
+}
+
+.tableForm .lbl {
+    /*width: 150px;*/
+    font-size: 11px;
+}
+
+.tableForm legend {
+    /*
+    font-weight:normal;
+    font-family:Verdana, Arial;
+    font-size: 11px;
+    padding: 1px;
+    color: #D2A044;
+*/
+}
+
+.tableForm fieldset {
+}
+
+.TBL th {
+    font-size: 1.1em;
+}
+
+.TBL td {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.text-amount {
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004D20;
+    font-family: Arial;
+    color: #FF0000;
+}
+
+.text-heighlight {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #004D20;
+    font-family: Arial;
+    color: #FF0000;
+}
+
+.rateTable {
+    width: 100%;
+}
+
+    .rateTable tr td {
+        border: 1px solid darkgrey;
+    }
+
+.tableForm {
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+input, textarea {
+    font-size: 11px;
+    font-family: Arial;
+    border: 1px solid #CCCCCC;
+    background-color: White;
+}
+
+select {
+    font-size: 11px;
+    font-family: Arial;
+    border: 1px solid #CCCCCC;
+    background-color: White;
+    width: auto;
+}
+
+.InputButtons {
+    border: 0px solid #CCCCCC;
+    background: #FFCC00;
+    color: #666666;
+    cursor: pointer;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px;
+    background: url("../images/btn_bg_submit.gif") repeat-x scroll left center #FFA822;
+    width: auto;
+}
+
+.bigText {
+    font-size: 15px;
+}
+
+.underline {
+    text-decoration: underline;
+}

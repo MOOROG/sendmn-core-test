@@ -1,0 +1,12 @@
+
+ALTER PROC PROC_EXECUTE_JOB
+(
+	@JOB_NAME VARCHAR(100)
+)
+AS
+SET NOCOUNT ON;
+SET XACT_ABORT ON;
+BEGIN
+	EXEC msdb.dbo.sp_start_job @job_name = @JOB_NAME
+END
+

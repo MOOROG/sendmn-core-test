@@ -1,0 +1,173 @@
+﻿G95
+.inputBox {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    width: 80px;
+    /*border: 1px solid #999999;*/
+    text-align: right;
+    /*background-color:bisque;*/
+    font-weight: bold;
+    font-size: 10px;
+    height: 10px;
+}
+
+.tdColl {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+    /*width: 80px;*/
+    background-color: #F0F0F0;
+}
+
+.tdPay {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+    /*width: 80px;*/
+    background-color: #DCE4E9;
+}
+
+.tdCollApp {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+    background-color: gainsboro;
+}
+
+.tdPayApp {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+    background-color: lightblue;
+}
+
+#updateColor {
+    color: red;
+    font-weight: bold;
+}
+
+#insertColor {
+    color: yellow;
+    font-weight: bold;
+}
+
+.time {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    size: 70px;
+    border: 1px solid #999999;
+    text-align: right;
+    background-color: bisque;
+}
+
+.costRate {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+.rate-M {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.rate-D {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+.offerRate {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.exTable .tbHeader {
+    text-align: center;
+    font-size: 12px;
+    color: Black;
+    border: 1px solid #BBCCCC;
+    height: 25px;
+}
+
+.exTable {
+    overflow-x: scroll;
+}
+
+    .exTable td {
+        background-color: #f2f2f2;
+        border: 1px solid #BBCCCC;
+        text-align: left;
+        color: Black;
+        font-size: 12px;
+    }
+
+.headingTH {
+    background: #c0c0c0;
+    /*background:#3A4F63;*/
+    font: normal 11px Arial, Helvetica, sans-serif;
+    color: #000;
+    text-align: left;
+    font-weight: bold;
+}
+
+.headingRate {
+    height: 20px;
+    width: 700px;
+    font-size: 11px;
+    padding-bottom: 2px;
+    xcolor: #999999;
+    color: Black;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.rowhighlight {
+    background-color: #DCEDED;
+    color: #000000;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    border-left: 1px #dedede solid;
+    border-bottom: 1px #dedede solid; /*font-weight: bold;*/
+}
+
+    .rowhighlight td {
+        border-left: 1px #dedede solid;
+        border-bottom: 1px #dedede solid;
+    }
+
+.colhighlight {
+    /*BACKGROUND-COLOR: #FFCC99;*/
+    COLOR: #000000;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    text-align: right;
+    border-left: 1px #dedede solid;
+    border-bottom: 1px #dedede solid;
+}
+
+.colhighlight, .rowNew, .rowCurrent td {
+    border-left: 1px #dedede solid;
+    border-bottom: 1px #dedede solid;
+}
+
+.rowNew {
+    BACKGROUND-COLOR: #9FCF9F;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*border: 1px solid #999999;*/
+    /*background-color:bisque;*/
+    font-weight: bold;
+    font-size: 10px;
+    text-align: right;
+}
+
+.rowCurrent {
+    BACKGROUND-COLOR: #F0F0F0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*border: 1px solid #999999;*/
+    /*background-color:bisque;*/
+    font-weight: bold;
+    font-size: 10px;
+    text-align: right;
+}
+
+input[readonly="readonly"] {
+    background: #EFEFEF;
+    color: #666666;
+}

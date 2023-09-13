@@ -1,0 +1,17 @@
+CREATE TABLE bankDepositAPIQueu
+(
+	rowId BIGINT NOT NULL IDENTITY(1,1),
+	controlNo VARCHAR(30) NOT NULL PRIMARY KEY,
+	rIdType NVARCHAR(30) NULL,
+	rIdNo NVARCHAR(30) NULL,
+	paidDate DATE NULL,
+	txnStatus VARCHAR(20) NULL,
+	apiResponseMsg VARCHAR(200) NULL,
+	apiResponseCode VARCHAR(10) NULL,
+	createdBy VARCHAR(50) NOT NULL,
+	createdDate DATETIME NOT NULL,
+	confirmedBy VARCHAR(30) NULL,
+	confirmedDate DATETIME NULL,
+	provider VARCHAR(15) NOT NULL
+);
+	

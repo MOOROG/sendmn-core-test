@@ -1,0 +1,45 @@
+.navbar-inverse,
+.login-head {
+    background-color: #f7f7f7 !important;
+    border: 1px solid #f7f7f7  !important;
+}
+
+.login-bg {
+    /*background: #FFB2B2;*/
+    background: rgba(174, 214, 241, 0.4);
+}
+.menu li a {
+    background: #4D9FD0;
+    color: #f1f1f1;
+    display: block;
+    font-weight: normal;
+    line-height: 35px;
+    margin: 0px;
+    padding: 7px 8px;
+    text-align: left;
+    text-decoration: none;
+    border: 0px;
+}
+.login-logo,
+.login-body .btn-default,
+input[type="button"],
+input[type="submit"],
+nput[type="reset"],
+.btn-primary {
+    background: #333;
+}
+
+.btn-primary {
+    background-color: #333;
+}
+
+.navbar-default {
+    border-color: #333;
+}
+
+.login-body .btn-default:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #000;
+}

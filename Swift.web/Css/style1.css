@@ -1,0 +1,82 @@
+﻿
+
+/* ----------- TAB MENU -------------------*/
+
+
+.tabs {
+    height: 2.8em;
+    margin-bottom: 1.2em;
+    position: relative;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+.tabs ul {margin:0; position:absolute; bottom:0; padding-left:1em; width: 100%; border-bottom: 1px solid #bbbbbb;}
+.tabs ul li{
+float:left;
+list-style-type:none;
+white-space:nowrap;
+margin-right:8px;
+background:#fff;
+position:relative;
+margin-bottom:-1px;
+    top: 0px;
+    left: 0px;
+}
+
+.errormsg
+{
+    color:Red;
+}
+
+/*none repeat scroll 0 0 #3A4F63 #4B6C9E */
+
+.tabs ul li a{
+display:block;
+font-size: 11px;
+font:Verdana;
+text-decoration:none;
+line-height:1.3em;
+padding:6px 8px 6px 8px;
+border: 1px solid #ccc;
+border-bottom: 1px solid #bbbbbb;
+background-color: #eeeeee;
+color:#3A4F63;
+font-weight:bold;
+}
+
+.tabs ul li a:hover {
+background-color: #4B6C9E;
+text-decoration:none;
+color:#FFCC00;
+}
+
+.tabs ul li a.selected {
+background-color: #fff;
+border: 1px solid #bbbbbb;
+border-bottom: 1px solid #fff;
+}
+
+.tabs ul li a.selected:hover {
+background-color: #fff;
+color:#3A4F63;
+}
+
+.breadCrumb, .bredCrom, .BredCurm {
+    background: url("../images/breadcrumb-select.png") no-repeat scroll 0.8% 0 transparent;
+    border-bottom: 1px solid #CACACA;
+    color: navy;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 18px;
+    margin: 4px 0 5px;
+    padding-left: 34px;
+    text-transform: uppercase;
+}
+
+.bredCrom div /*need to remove this class later on*/ 
+{
+    font-size: 12px;
+}

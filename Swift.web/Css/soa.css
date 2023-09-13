@@ -1,0 +1,119 @@
+* {
+    font-size: 14px;
+    line-height:15px;
+}
+
+p {
+    line-height: 16px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table-data table,
+.table-data th,
+.table-data td {
+    border: 1px solid #000;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+}
+
+thead.headerRow {
+    background-color: #00008b;
+    color: #fff;
+}
+
+    thead.headerRow th,
+    tbody.info-data td,
+    tr.total td {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+tr.total td {
+    background: #808080;
+    color: #000;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.info-data tr:nth-child(even) {
+    background-color: #87ceeb;
+}
+
+p {
+    padding: 1px 0;
+    margin: 0;
+}
+
+.logo {
+    width: 400px;
+}
+
+    .logo img {
+        width: 100%;
+    }
+
+h2,
+h2 span {
+    padding: 0;
+    margin: 3px 0;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    margin: 3px 0;
+}
+
+    h3 span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+.copy p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+label {
+    font-weight: 400;
+}
+
+.info {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tright {
+    text-align: right;
+}
+
+.tleft {
+    text-align: left;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.water-mark {
+    width: 50px;
+    /* width and height of image */
+    height: 50px;
+    position: absolute;
+    left: 20%;
+    margin-top: -50px;
+    z-index: -1;
+}
+
+    .water-mark img {
+        width: 100%;
+    }

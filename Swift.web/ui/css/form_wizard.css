@@ -1,0 +1,258 @@
+.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+
+    .wizard .nav-tabs {
+        position: relative;
+        margin: 10px auto;
+        margin-bottom: 0;
+        border-bottom-color: #e0e0e0;
+    }
+
+    .wizard > div.wizard-inner {
+        position: relative;
+    }
+
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    background: transparent;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+    span.round-tab i {
+        color: #555555;
+    }
+
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #d41119;
+}
+
+    .wizard li.active span.round-tab i {
+        color: #d41119;
+    }
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #d41119;
+}
+
+.wizard .nav-tabs > li {
+    width: 20%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #d41119;
+}
+
+.wizard .nav-tabs > li a {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+    background:transparent;
+}
+
+    .wizard .nav-tabs > li a:hover {
+        background: transparent;
+    }
+
+.wizard .tab-pane {
+    position: relative;
+    margin-top: 25px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+    padding-left: 15px;
+}
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+}
+
+.file-upload {
+    width: 200px;
+    height: 200px;
+    margin: 25px 0;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden
+}
+
+    .file-upload .uploadbutton {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        cursor: pointer;
+        width: 100%
+    }
+
+    .file-upload > span {
+        max-width: 100%;
+        z-index: 1;
+        background: #fff
+    }
+
+        .file-upload > span img {
+            max-width: 200px
+        }
+
+    .file-upload > span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px;
+        padding: 5px 5px;
+        left: 10px;
+        right: 10px
+    }
+
+.loading-img {
+    display: none
+}
+
+.img-sample {
+    display: block;
+    margin: 10px 0;
+    position: relative;
+    font-size: 11px
+}
+
+.img-sample {
+    display: block;
+    margin: 10px 0;
+    position: relative;
+    font-size: 11px
+}
+
+    .img-sample label {
+        display: block
+    }
+
+    .img-sample img {
+        max-height: 80px
+    }
+
+    .img-sample .enlarge {
+        display: none;
+        position: absolute;
+        bottom: 0
+    }
+
+    .img-sample .samp-control {
+        display: inline-block;
+        cursor: pointer
+    }
+
+        .img-sample .samp-control:hover .enlarge {
+            display: block;
+            background: #f4f8fb;
+            padding: 5px;
+            border-radius: 2px
+        }
+
+            .img-sample .samp-control:hover .enlarge img {
+                max-height: 150px
+            }
+
+    .img-sample .samp-control-2 {
+        display: inline-block;
+        cursor: pointer
+    }
+
+        .img-sample .samp-control-2:hover .enlarge {
+            display: block;
+            background: #f4f8fb;
+            padding: 5px;
+            border-radius: 2px
+        }
+
+            .img-sample .samp-control-2:hover .enlarge img {
+                max-height: 300px
+            }
+
+.primary-c {
+    /*color: #ED1C24*/
+    color: #5bc0de;
+}
+

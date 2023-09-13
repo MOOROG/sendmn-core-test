@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AgentMain.master.cs" Inherits="Swift.web.AgentNew.AgentMain" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title><%=Swift.web.Library.GetStatic.ReadWebConfig("companyName","") %> - Agent</title>
+
+    <link rel="icon" type="image/ico" sizes="32x32" href="/ui/index/images/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="/ui/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/receipt.css" rel="stylesheet" />
+    <link href="../css/receiver.css" rel="stylesheet">
+    <link href="/ui/css/menu.css" type="text/css" rel="stylesheet" />
+    <link href="/ui/css/waves.min.css" type="text/css" rel="stylesheet" />
+    <link href="/AgentNew/css/ie9.css" rel="stylesheet" />
+    <link href="/AgentNew/css/signature-pad.css" type="text/css" rel="stylesheet" />
+
+    <%--<link href="/css/swift_component.css" rel="stylesheet" type="text/css" />--%>
+    <link href="/ui/css/menu1.css" rel="stylesheet" />
+    <link href="../css/TranStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/TranStyle2.css" rel="stylesheet" type="text/css" />
+    <link href="/js/jQuery/jquery.gritter.css" rel="stylesheet" type="text/css" />
+    <link href="/ui/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/js/jQuery/jquery-ui.css" rel="stylesheet" />
+    <%--    <link href="/ui/css/datepicker-custom.css" rel="stylesheet" />--%>
+    <link href="../ui/css/form_wizard.css" rel="stylesheet" />
+    <link href="/ui/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <%-- <link href="/css/signature-pad.css" rel="stylesheet" />--%>
+    <script src="/ui/js/jquery.min.js"></script>
+    <%--<script src="../js/jQuery/jquery.min.js"></script>--%>
+    <script src="/ui/bootstrap/js/bootstrap.min.js" type="text/javascript"> </script>
+    <script src="/AgentNew/js/functions.js?v=1.1"></script>
+    <script src="/ui/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/js/Swift_grid.js" type="text/javascript"> </script>
+    <script src="/js/swift_autocomplete.js"></script>
+    <script src="/AgentNew/js/swift_calender.js"></script>
+    <script src="/js/browserDetect.js"></script>
+    <script src="/AgentNew/js/signature_pad.umd.js"></script>
+    <%-- <script src="js/jquery.validate.js" type="text/javascript"></script>--%>
+    <script src="/ui/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="/js/popper/popper.min.js"></script>
+    <script src="/ui/js/metisMenu.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+    <%-- <script src="/ui/js/pickers-init.js"></script>--%>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.3/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.3/js/intlTelInput.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function CheckTabBack() {
+            if (location.href.indexOf('/AgentNew/Dashboard.aspx') > 0) {
+                history.pushState(null, null, location.href);
+                window.onpopstate = function () {
+                    window.location.replace = location.href;
+                    history.go(1);
+                };
+            }
+        }
+        CheckTabBack();
+
+        $(window).on('beforeunload', function () {
+            $(window).scrollTop(0);
+        });
+
+        SetContentPlaceHolderIdValue("ContentPlaceHolder1_");
+        function GetUsers() {
+            var user = "<%=getUser() %>";
+            return user;
+        }
+
+        function GetApiPartnerIds() {
+            apiPartnerIds = "<%=GetAPIPartnerId()%>".split(',');
+        }
+
+        GetApiPartnerIds();
+
+        function PrintFrame() {
+            window.print();
+        }
+
+        function SetMessageBox(msg, id) {
+            alert(msg);
+        }
+
+        function ShowCalc() {
+            var param = "dialogHeight:900px;dialogWidth:900px;dialogLeft:200;dialogTop:100;center:yes";
+            PopUpWindow("/AgentPanel/International/Calculator/Calculator.aspx", param);
+        }
+    </script>
+    <script type="text/javascript">
+        function ExportToExcel() {
+            if (!document.getElementById("main")) {
+                return alert('There is nothing to download!');
+            }
+            var html = document.getElementById("main").innerHTML;
+            //alert(html);
+            if (html == null || html == "" || html == undefined) {
+                return false;
+            }
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent(html));
+        }
+    </script>
+    <style type="text/css">
+        .navbar-inverse {
+            background-color: #f7f7f7 !important;
+            border-color: #f7f7f7 !important;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .navbar-default {
+            background: #4D9FD0  !important;
+            border-radius: 0 !important;
+            border: 1px solid #4D9FD0 !important;
+        }
+
+        .notification-menu .navbar-inverse ul.navbar-nav > li > a {
+            color: #333 !important;
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1200px;
+            }
+        }
+
+        .ui-widget-content {
+            z-index: 9999 !important;
+            position: absolute !important;
+        }
+
+        .embed-responsive-16by9 {
+            padding-bottom: 950px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="sm1"></asp:ScriptManager>
+        <nav class="navbar navbar-inverse yamm navbar-fixed-top main-nav sendm" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="/Images/jme.png" alt="logo" /></a>
+                </div>
+                <div id="navbar-menu" class="navbar-collapse collapse notification-menu">
+                    <ul class="nav navbar-nav navbar-right navbar-top-drops">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle button-wave" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-xs badge-warning">
+                            <label id="countNotification" runat="server" style="display: contents;">0</label></span></a>
+                            <ul class="dropdown-menu dropdown-lg" id="notiUL" runat="server">
+                                <li class="notify-title">0 New Notification(s)
+                                </li>
+                                <li class="clearfix">
+                                    <a href="#">
+                                        <span class="pull-left">
+                                            <i class="fa fa-bell" style='color: #0e96ec'></i>
+                                        </span>
+
+                                        <span class="media-body">No New Notification(s)
+                                            <em></em>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown profile-dropdown">
+                            <a href="#" class="dropdown-toggle button-wave" data-toggle="dropdown" role="button">
+                                <img src="#" alt="" width="25">
+                                <asp:Label ID="userName" runat="server"></asp:Label>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Admin/ChangePassword.aspx" target="mainFrame"><i class="fa fa-key"></i>Change Password</a></li>
+                                <li><a href="/AgentNew/LogOut.aspx"><i class="fa fa-key"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <a onclick="PrintFrame();" class="btn print" title="Print Docs"><i class="fa fa-print"></i></a>&nbsp;
+                    <a onclick="ExportToExcel();" class="btn printExcel" title="Export to Excel"><i class="fa fa-file-excel-o"></i></a>
+                    <a onclick="ShowCalc();" class="btn calculator" title="Calculate Ex. Rate"><i class="fa fa-calculator"></i></a>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+            <!--top navigation-->
+            <div class="clearfix">
+            </div>
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div id="menu" class="menu navbar-collapse collapse" runat="server">
+                    </div>
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </nav>
+        <div class="container">
+            <div class="main-container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container text-center">
+                &copy; Copyright <%=DateTime.Now.ToString("yyyy") %>. <%= Swift.web.Library.GetStatic.ReadWebConfig("copyRightName","") %>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

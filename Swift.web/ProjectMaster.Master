@@ -1,0 +1,51 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/ProjectMaster.master.cs" EnableViewState="false" Inherits="SwiftHrManagement.web.ProjectMaster" %>
+<%@ Import Namespace="Swift.web.Library" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<title>Swift E-Payment System</title>
+
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <<%--link href="css/swift_component.css" rel="stylesheet" type="text/css" />--%>
+    <script type="text/javascript">
+        var tim;
+
+        var sec = "<%#GetStatic.GetSessionTimeOut() %>";
+        sec = parseInt(sec) + 1;
+
+        function f2() {
+            sec = parseInt(sec) - 1;
+            //            document.getElementById("showtime").innerHTML = sec + " Second(s)";
+            if (sec == 0) {
+                window.location.replace("/Logout.aspx");
+            }
+            tim = setTimeout("f2()", 1000);
+        }
+    </script>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+</asp:ScriptManager>
+    <%--<table style="float: right; width: 205px; position:fixed; left:800px;">
+        <tr>
+            <th>
+                Remaining Time :
+                <span id="showtime"></span>
+            </th>
+        </tr>
+    </table>--%>
+<asp:ContentPlaceHolder ID="MainPlaceHolder" runat="server">
+</asp:ContentPlaceHolder>
+</form>
+</body>
+</html>
+<script type="text/javascript">
+    f2();
+</script>

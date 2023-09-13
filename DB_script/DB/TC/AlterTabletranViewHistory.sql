@@ -1,0 +1,1 @@
+ALTER TABLE tranViewHistory ALTER COLUMN tranId BIGINT

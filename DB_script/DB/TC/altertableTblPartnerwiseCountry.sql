@@ -1,0 +1,2 @@
+ALTER TABLE TblPartnerwiseCountry ADD isACValidateSupport BIT NULL
+ALTER TABLE TblPartnerwiseCountryMod ADD isACValidateSupport BIT NULL

@@ -1,0 +1,38 @@
+@media (min-width: 1079px) {
+    .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+}
+
+/* iPad Landscape Mode and Large Tablets */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 767px) {
+    .login {
+        padding: 50px 0;
+    }
+
+    .login-panel {
+        margin: 20px 0;
+    }
+
+    .intro h1 {
+        font-size: 60px;
+    }
+}
+
+/*iPad Portrait Mode, iPad Mini and Small Tablets */
+@media (max-width: 768px) {
+    .login {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+/*iPhone Portrait Mode and Very Small Mobile Phones*/
+@media screen and (max-width: 320px) {
+}

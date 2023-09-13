@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CD20C8F-132A-4A16-8BEA-FD5BBA6483F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Swift.DAL</RootNamespace>
+    <AssemblyName>Swift.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=0.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.BatchParserClient, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.BatchParserClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Diagnostics.Strace, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Diagnostics.Strace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlParser, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.SqlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Utility, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.UtilityEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.UtilityEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlTDiagm, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SqlTDiagm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SString, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.SString.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\lib\net45\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountReport\AccountReportDao.cs" />
+    <Compile Include="AccountReport\AccountStatementDAO.cs" />
+    <Compile Include="AccountReport\DayBookReportDAO.cs" />
+    <Compile Include="AccountReport\VoucherGeneration.cs" />
+    <Compile Include="Agentpanel\Domain\IRHTranDetail.cs" />
+    <Compile Include="Agentpanel\Domain\Transaction.cs" />
+    <Compile Include="Agentpanel\Reports\SOAMonthlyDao.cs" />
+    <Compile Include="Agentpanel\Send\SendTranIRHDao.cs" />
+    <Compile Include="Agentpanel\Transaction\Domestic\SendTransactionDao.cs" />
+    <Compile Include="Agentpanel\Utilities\TxnDocUploadDao.cs" />
+    <Compile Include="APIDataMappingDao\APIMapping.cs" />
+    <Compile Include="ApplicationLogs\LogDAO.cs" />
+    <Compile Include="BL\DomesticOperation\CreditLimit\CreditLimitDomesticDao.cs" />
+    <Compile Include="BL\DomesticOperation\UserWiseTxnLimit\UserWiseTxnLimitDao.cs" />
+    <Compile Include="BL\Helper\ThirdParty\ApiUtility.cs" />
+    <Compile Include="BL\Helper\ThirdParty\Dao.cs" />
+    <Compile Include="BL\Helper\XmlGenerator.cs" />
+    <Compile Include="BL\LoadMoneyWalletDao\WalletDao.cs" />
+    <Compile Include="BL\SwiftSystem\AgentDao.cs" />
+    <Compile Include="BL\SwiftSystem\AgentUserDao.cs" />
+    <Compile Include="BL\SwiftSystem\ApplicationRoleDao.cs" />
+    <Compile Include="BL\SwiftSystem\ApplicationUserDao.cs" />
+    <Compile Include="BL\SwiftSystem\LoggedInUser.cs" />
+    <Compile Include="BL\SwiftSystem\UserGroupMappingDao.cs" />
+    <Compile Include="BL\System\Utilities\ScannerSetupDao.cs" />
+    <Compile Include="BL\ThirdParty\BankDeposit\BankDepositDao.cs" />
+    <Compile Include="BL\ThirdParty\BankDeposit\IBankDepositDao.cs" />
+    <Compile Include="BL\ThirdParty\GME\GMEDao.cs" />
+    <Compile Include="BL\ThirdParty\GME\GMEPayConfirmDetails.cs" />
+    <Compile Include="BL\ThirdParty\GME\IGMEDao.cs" />
+    <Compile Include="BL\ThirdParty\RiaBank\IRiaDao.cs" />
+    <Compile Include="BL\ThirdParty\RiaBank\RiaDao.cs" />
+    <Compile Include="BL\ThirdParty\ThirdpartyPayTxn\IPayTransactionDao.cs" />
+    <Compile Include="BL\ThirdParty\ThirdpartyPayTxn\IPayTransactionThirdpartyDao.cs" />
+    <Compile Include="BL\ThirdParty\ThirdpartyPayTxn\PayTransactionDao.cs" />
+    <Compile Include="BL\ThirdParty\ThirdpartyPayTxn\PayTransactionThirdpartyDao.cs" />
+    <Compile Include="Common\BankSearchModel.cs" />
+    <Compile Include="Common\BranchModel.cs" />
+    <Compile Include="Common\CustomerStatement.cs" />
+    <Compile Include="Common\KJAutoRefundModel.cs" />
+    <Compile Include="Common\Location.cs" />
+    <Compile Include="Common\VoucherTempData.cs" />
+    <Compile Include="ExchangeSystem\AccountStatementDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExchangeSystem\ExchangeDao.cs" />
+    <Compile Include="ExchangeSystem\LedgerSetup\LedgerDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GeneralDataSettings\GeneralDataSettingsDao.cs" />
+    <Compile Include="GeneralDataSettings\GeneralSettingsSubGridDao.cs" />
+    <Compile Include="JMEFundTransfer\JmeFundTransferDao.cs" />
+    <Compile Include="Library\Mapper.cs" />
+    <Compile Include="Library\UtilityDAO.cs" />
+    <Compile Include="Model\CommissionModel.cs" />
+    <Compile Include="Model\Monpep.cs" />
+    <Compile Include="Model\StatementModel.cs" />
+    <Compile Include="Model\ViewStatementModel.cs" />
+    <Compile Include="OnlineAgent\BenificiarData.cs" />
+    <Compile Include="OnlineAgent\OnlineCustomerDao.cs" />
+    <Compile Include="OnlineAgent\OnlineCustomerModel.cs" />
+    <Compile Include="OtherServices\LuckyDrawDao.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Remittance\Administration\AdminDao.cs" />
+    <Compile Include="Remittance\Administration\AgentGroupDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentBankAccountDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentBusinessFunctionDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentContactPersonDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentCurrencyDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentDocumentDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentFundDepositDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentInfoDao.cs" />
+    <Compile Include="Remittance\Administration\Agent\AgentOwnershipInfDao.cs" />
+    <Compile Include="Remittance\Administration\BlockAgent\BlockAgentDao.cs" />
+    <Compile Include="Remittance\Administration\BranchDao.cs" />
+    <Compile Include="Remittance\Administration\CountryDao.cs" />
+    <Compile Include="Remittance\Administration\CurrencyDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerDocumentDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerIdentityDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerInfoDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomersDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerSetupDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\CustomerSetupIntlDao.cs" />
+    <Compile Include="Remittance\Administration\Customer\RemitCardDao.cs" />
+    <Compile Include="Remittance\Administration\EnrollCommSetupDao.cs" />
+    <Compile Include="Remittance\Administration\ExtBankSetupDao.cs" />
+    <Compile Include="Remittance\Administration\ExternalBankSetupDao.cs" />
+    <Compile Include="Remittance\Administration\ExternalBranchSetupDao.cs" />
+    <Compile Include="Remittance\Administration\FundTransferReceiptDao.cs" />
+    <Compile Include="Remittance\Administration\GroupLocationMapDao.cs" />
+    <Compile Include="Remittance\Administration\MobileFormatDao.cs" />
+    <Compile Include="Remittance\Administration\PaymentModeDao.cs" />
+    <Compile Include="Remittance\Administration\ReceiverInformation\ReceiverInformationDAO.cs" />
+    <Compile Include="Remittance\Administration\ServiceTypeDao.cs" />
+    <Compile Include="Remittance\Administration\StateDao.cs" />
+    <Compile Include="Remittance\Administration\UserDao.cs" />
+    <Compile Include="Remittance\Administration\VisaCardDetail\VisaCardDao.cs" />
+    <Compile Include="Remittance\AgentRating\AgentRatingDao.cs" />
+    <Compile Include="Remittance\AgentRiskProfiling\agentRiskProfilingDao.cs" />
+    <Compile Include="Remittance\Amendment\AmendmentDao.cs" />
+    <Compile Include="Remittance\AML\AMLReportDao.cs" />
+    <Compile Include="Remittance\APIPartner\APIPartnerDao.cs" />
+    <Compile Include="Remittance\ApplicationLogsDao.cs" />
+    <Compile Include="Remittance\BranchRating\BranchRatingNEWDao.cs" />
+    <Compile Include="Remittance\CashAndVault\CashAndVaultDao.cs" />
+    <Compile Include="Remittance\CashAndVault\CashHoldLimitTopUpDao.cs" />
+    <Compile Include="Remittance\Compliance\AmountThresholdSetupDao.cs" />
+    <Compile Include="Remittance\Compliance\CisDetailDao.cs" />
+    <Compile Include="Remittance\Compliance\CisMasterDao.cs" />
+    <Compile Include="Remittance\Compliance\complianceDao.cs" />
+    <Compile Include="Remittance\Compliance\CsDetailDao.cs" />
+    <Compile Include="Remittance\Compliance\CsMasterDao.cs" />
+    <Compile Include="Remittance\Compliance\ErroneousTrnPay.cs" />
+    <Compile Include="Remittance\Compliance\PayComplianceDao.cs" />
+    <Compile Include="Remittance\Compliance\SuspiciousTransactionDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\BalanceTopUp\BalanceTopUpDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\BalanceTopUp\BalanceTopUpIntDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditLimit\CreditLimitDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditLimit\CreditLimitIntDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditSecurity\BankGuaranteeDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditSecurity\CashSecurityDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditSecurity\CreditSecurityDocDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditSecurity\FixedDepositDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\CreditSecurity\MortgageDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\TransactionLimit\ReceiveTranLimitDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\TransactionLimit\SendTranLimitDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\UserTopUpLimit\TopupLimitAgentDao.cs" />
+    <Compile Include="Remittance\CreditRiskManagement\UserTopUpLimit\TopUpLimitDao.cs" />
+    <Compile Include="Remittance\CustomerDeposits\CustomerDepositDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\AgentExRateMenuDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\CrossRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\CrossRateDecimalMaskDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\DefExRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\DeRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\ExRateOperationDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\ExRateReportDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\ExRateTreasuryDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\ImportSettlementRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\RateMaskDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\SeRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\spExRateDao.cs" />
+    <Compile Include="Remittance\ExchangeRate\ThirdPartyExRateDao.cs" />
+    <Compile Include="Remittance\LogDbDao.cs" />
+    <Compile Include="Remittance\LogDbGridDao.cs" />
+    <Compile Include="Remittance\OFACManagement\OFACDao.cs" />
+    <Compile Include="Remittance\OFACManagement\OFACManageDao.cs" />
+    <Compile Include="Remittance\RBA\RBACustomerDao.cs" />
+    <Compile Include="Remittance\Reconciliation\ReconciliationDao.cs" />
+    <Compile Include="Remittance\Reconciliation\TxnDocumentsDao.cs" />
+    <Compile Include="Remittance\ReferralSetup\ReferralSetupDao.cs" />
+    <Compile Include="Remittance\RemittanceGridDao.cs" />
+    <Compile Include="Remittance\RiskBaseAnalysis\RBACriteriaDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\AgentCommissionDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\CommissionSetup\CommGroupMappingDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\CommissionSetup\ScDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\CommissionSetup\ScMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\DscDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\dscMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Pay\DcPayDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Pay\DcPayMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Pay\ScPayDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Pay\ScPayMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Send\DcSendDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Send\DcSendMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Send\ScSendDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\Send\ScSendMasterDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\SscDetailDao.cs" />
+    <Compile Include="Remittance\ServiceCharge\sscMasterDao.cs" />
+    <Compile Include="Remittance\SyncDao\BankBranchDao.cs" />
+    <Compile Include="Remittance\SyncDao\StateCityTownDao.cs" />
+    <Compile Include="Remittance\SystemEmailSetupDao.cs" />
+    <Compile Include="Remittance\System\DcManagement\DcManagementDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\ApiLocationMapperDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\ContactCategory.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\DynamicPopupMessageDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\FieldSettingDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\FileFormatDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\IPBlacklistDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\MaintenancePlanDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\MessageBroadCastDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\MessageSettingDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\PasswordPolicyDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\StaticDataDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\SystemEmailSetupDao.cs" />
+    <Compile Include="Remittance\System\GeneralSettings\TxnMessageSettingDao.cs" />
+    <Compile Include="Remittance\System\Notification\ApplicationLogsDao.cs" />
+    <Compile Include="Remittance\System\Notification\ChangeApprovalDao.cs" />
+    <Compile Include="Remittance\System\Notification\NotificationDao.cs" />
+    <Compile Include="Remittance\System\UserManagement\UserLimitDao.cs" />
+    <Compile Include="Remittance\System\Utility\AgentLocationSetupDao.cs" />
+    <Compile Include="Remittance\System\Utility\CompressImageDao.cs" />
+    <Compile Include="Remittance\System\Utility\DataExportDao.cs" />
+    <Compile Include="Remittance\System\Utility\DataImportDao.cs" />
+    <Compile Include="Remittance\System\Utility\DownloadSambaDataDao.cs" />
+    <Compile Include="Remittance\System\Utility\ExportCsvFileDao.cs" />
+    <Compile Include="Remittance\System\Utility\FileDownloadLog.cs" />
+    <Compile Include="Remittance\System\Utility\Helper\XmlGenerator.cs" />
+    <Compile Include="Remittance\System\Utility\ImportSambaDataDao.cs" />
+    <Compile Include="Remittance\System\Utility\MGPointCodeSetupDao.cs" />
+    <Compile Include="Remittance\System\Utility\PaySyncManageDao.cs" />
+    <Compile Include="Remittance\System\Utility\SendSyncManageDao.cs" />
+    <Compile Include="Remittance\System\Utility\syncTroubleTicketDao.cs" />
+    <Compile Include="Remittance\System\Utility\UploadCouponDao.cs" />
+    <Compile Include="Remittance\System\Utility\UploadVoucherDao.cs" />
+    <Compile Include="Remittance\System\Utility\Utility.cs" />
+    <Compile Include="Remittance\ThirdPartySyncDAL\ReprocessTransactionDao.cs" />
+    <Compile Include="Remittance\TPSetup\PartnerDao.cs" />
+    <Compile Include="Remittance\TPSetup\TPSetupDao.cs" />
+    <Compile Include="Remittance\Transaction\ApiLogDao.cs" />
+    <Compile Include="Remittance\Transaction\ApproveTransactionDao.cs" />
+    <Compile Include="Remittance\Transaction\CancelTransactionDao.cs" />
+    <Compile Include="Remittance\Transaction\ExRateDao.cs" />
+    <Compile Include="Remittance\Transaction\GlobalBankCardDao.cs" />
+    <Compile Include="Remittance\Transaction\LockUnlock.cs" />
+    <Compile Include="Remittance\Transaction\ModifyTransactionDao.cs" />
+    <Compile Include="Remittance\Transaction\PayAcDepositDao.cs" />
+    <Compile Include="Remittance\Transaction\PayTransactionDao.cs" />
+    <Compile Include="Remittance\Transaction\PayTransaction\PayDao.cs" />
+    <Compile Include="Remittance\Transaction\ReceiptDao.cs" />
+    <Compile Include="Remittance\Transaction\RemitCalculatorDao.cs" />
+    <Compile Include="Remittance\Transaction\ThirdParty\Ria\RiaTxnDao.cs" />
+    <Compile Include="Remittance\Transaction\ThirdParty\Ria\RiaTxnDetails.cs" />
+    <Compile Include="Remittance\Transaction\ThirdParty\TransactionUtilityDao.cs" />
+    <Compile Include="Remittance\Transaction\ThirdParty\XPressMoney\XpressPayDao.cs" />
+    <Compile Include="Remittance\Transaction\TranAgentReportDao.cs" />
+    <Compile Include="Remittance\Transaction\TranCalculator.cs" />
+    <Compile Include="Remittance\Transaction\TranReportDao.cs" />
+    <Compile Include="Remittance\Transaction\TranReportDao1.cs" />
+    <Compile Include="Remittance\Transaction\TranViewDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Remittance\Transaction\UcTranDao.cs" />
+    <Compile Include="Remittance\Transaction\UpdateBranchDao.cs" />
+    <Compile Include="Remittance\Transaction\UserMatrixDao.cs" />
+    <Compile Include="RiskBasedAssessment\RiskBasedAssessmentDao.cs" />
+    <Compile Include="SwiftDAL\DbResult.cs" />
+    <Compile Include="SwiftDAL\GridDao.cs" />
+    <Compile Include="Remittance\RemittanceDao.cs" />
+    <Compile Include="SwiftDAL\ReportResult.cs" />
+    <Compile Include="SwiftDAL\SwiftDao.cs" />
+    <Compile Include="SwiftDAL\UserDetails.cs" />
+    <Compile Include="Treasury\FundTransferDao.cs" />
+    <Compile Include="Treasury\IFundTransferDao.cs" />
+    <Compile Include="VoucherReport\VoucherReportDAO .cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\DomesticOperation\CommissionSetup\" />
+    <Folder Include="BL\Transaction\ThirdParty\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Swift.DAL.dll" />
+    <Content Include="bin\Release\Swift.DAL.dll" />
+    <Content Include="bin\Release\Swift.DAL.pdb" />
+    <Content Include="obj\Debug\Swift.DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Swift.DAL.dll" />
+    <Content Include="obj\Debug\Swift.DAL.pdb" />
+    <Content Include="obj\Release\Swift.DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Swift.DAL.dll" />
+    <Content Include="obj\Release\Swift.DAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GmeKoreaPayAPI\GmeKoreaPayAPI.csproj">
+      <Project>{49151f9c-9653-4f7e-b7a9-869f7e50517a}</Project>
+      <Name>GmeKoreaPayAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Swift.API\Swift.API.csproj">
+      <Project>{80429c0a-ec99-4d4b-ade1-c4aef5be5490}</Project>
+      <Name>Swift.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets" Condition="Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18178.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

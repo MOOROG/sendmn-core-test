@@ -1,0 +1,246 @@
+[
+  {
+    "id": "MNT",
+    "name": "20000"
+  },
+  {
+    "id": "MNT",
+    "name": "10000"
+  },
+  {
+    "id": "MNT",
+    "name": "5000"
+  },
+  {
+    "id": "MNT",
+    "name": "1000"
+  },
+  {
+    "id": "MNT",
+    "name": "500"
+  },
+  {
+    "id": "MNT",
+    "name": "100"
+  },
+  {
+    "id": "MNT",
+    "name": "50"
+  },
+  {
+    "id": "MNT",
+    "name": "20"
+  },
+  {
+    "id": "MNT",
+    "name": "10"
+  },
+  {
+    "id": "EUR",
+    "name": "500"
+  },
+  {
+    "id": "EUR",
+    "name": "200"
+  },
+  {
+    "id": "EUR",
+    "name": "100"
+  },
+  {
+    "id": "EUR",
+    "name": "50"
+  },
+  {
+    "id": "EUR",
+    "name": "20"
+  },
+  {
+    "id": "EUR",
+    "name": "10"
+  },
+  {
+    "id": "EUR",
+    "name": "5"
+  },
+  {
+    "id": "USD",
+    "name": "100"
+  },
+  {
+    "id": "USD",
+    "name": "50"
+  },
+  {
+    "id": "USD",
+    "name": "20"
+  },
+  {
+    "id": "USD",
+    "name": "10"
+  },
+  {
+    "id": "USD",
+    "name": "5"
+  },
+  {
+    "id": "USD",
+    "name": "2"
+  },
+  {
+    "id": "USD",
+    "name": "1"
+  },
+  {
+    "id": "KRW",
+    "name": "50000"
+  },
+  {
+    "id": "KRW",
+    "name": "10000"
+  },
+  {
+    "id": "KRW",
+    "name": "5000"
+  },
+  {
+    "id": "KRW",
+    "name": "1000"
+  },
+  {
+    "id": "RUB",
+    "name": "5000"
+  },
+  {
+    "id": "RUB",
+    "name": "2000"
+  },
+  {
+    "id": "RUB",
+    "name": "1000"
+  },
+  {
+    "id": "RUB",
+    "name": "500"
+  },
+  {
+    "id": "RUB",
+    "name": "200"
+  },
+  {
+    "id": "RUB",
+    "name": "100"
+  },
+  {
+    "id": "RUB",
+    "name": "50"
+  },
+  {
+    "id": "RUB",
+    "name": "10"
+  },
+  {
+    "id": "RUB",
+    "name": "5"
+  },
+  {
+    "id": "CNY",
+    "name": "100"
+  },
+  {
+    "id": "CNY",
+    "name": "50"
+  },
+  {
+    "id": "CNY",
+    "name": "20"
+  },
+  {
+    "id": "CNY",
+    "name": "10"
+  },
+  {
+    "id": "CNY",
+    "name": "5"
+  },
+  {
+    "id": "CNY",
+    "name": "1"
+  },
+  {
+    "id": "JPY",
+    "name": "10000"
+  },
+  {
+    "id": "JPY",
+    "name": "5000"
+  },
+  {
+    "id": "JPY",
+    "name": "1000"
+  },
+  {
+    "id": "AUD",
+    "name": "100"
+  },
+  {
+    "id": "AUD",
+    "name": "50"
+  },
+  {
+    "id": "AUD",
+    "name": "20"
+  },
+  {
+    "id": "AUD",
+    "name": "10"
+  },
+  {
+    "id": "AUD",
+    "name": "5"
+  },
+  {
+    "id": "HKD",
+    "name": "1000"
+  },
+  {
+    "id": "HKD",
+    "name": "500"
+  },
+  {
+    "id": "HKD",
+    "name": "100"
+  },
+  {
+    "id": "HKD",
+    "name": "50"
+  },
+  {
+    "id": "HKD",
+    "name": "20"
+  },
+  {
+    "id": "HKD",
+    "name": "10"
+  },
+  {
+    "id": "TRY",
+    "name": "200"
+  },
+  {
+    "id": "TRY",
+    "name": "100"
+  },
+  {
+    "id": "TRY",
+    "name": "50"
+  },
+  {
+    "id": "TRY",
+    "name": "20"
+  },
+  {
+    "id": "TRY",
+    "name": "10"
+  }
+]

@@ -1,0 +1,269 @@
+Malaysia:
+{
+   "SenderId":"95",
+   "SIpAddress":null,
+   "IsRealtime":false,
+   "RequestedBy":"mobile",
+   "Receiver":{
+      "ReceiverId":"130",
+      "FirstName":null,
+      "MiddleName":null,
+      "LastName":null,
+      "IdType":null,
+      "IdNo":null,
+      "IdIssue":null,
+      "IdExpiry":null,
+      "Dob":null,
+      "MobileNo":null,
+      "NativeCountry":null,
+      "StateId":0,
+      "DistrictId":0,
+      "Address":null,
+      "City":null,
+      "Email":null,
+      "AccountNo":"819919191"
+   },
+   "CDD":{
+      "PurposeOfRemittance":"8058",
+      "RelWithSender":"11083",
+      "SourceOfFund":null
+   },
+   "SCountryId":0,
+   "PCountryId":0,
+   "DeliveryMethodId":2,
+   "PBranchId":0,
+   "PBankId":2179,
+   "CollCurr":"MNT",
+   "PayoutCurr":"MYR",
+   "CollAmt":"66093",
+   "PayoutAmt":"100.0000",
+   "TransferAmt":"65793.0000",
+   "ServiceCharge":"300.0000",
+   "ExRate":"0.00151992269852424",
+   "CalBy":"p",
+   "TpExRate":"0.00151992269852424",
+   "TpPCurr":"MYR",
+   "PayOutPartnerId":0,
+   "ForexSessionId":"A07F078A-A1C8-4758-AEBE-F790B360785E",
+   "PaymentType":"wallet",
+   "SourceType":"",
+   "ScDiscount":null,
+   "SchemeId":null,
+   "txnCompliance":{
+      "result":[
+         {
+            "answer":"YES",
+            "qId":"1",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"SALARY",
+            "qId":"2",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"TUITION FEE",
+            "qId":"3",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"NO",
+            "qId":"4",
+            "qType":"dropdown"
+         }
+      ],
+      "txnType":"0"
+   },
+   "ProcessId":null,
+   "UserName":"oct15",
+   "ProviderId":"",
+   "SessionId":"",
+   "PBranch":null,
+   "RequestFrom":null,
+   "password":null
+}
+
+China:
+{
+   "SenderId":"95",
+   "SIpAddress":null,
+   "IsRealtime":false,
+   "RequestedBy":"mobile",
+   "Receiver":{
+      "ReceiverId":"131",
+      "FirstName":null,
+      "MiddleName":null,
+      "LastName":null,
+      "IdType":null,
+      "IdNo":null,
+      "IdIssue":null,
+      "IdExpiry":null,
+      "Dob":null,
+      "MobileNo":null,
+      "NativeCountry":null,
+      "StateId":0,
+      "DistrictId":0,
+      "Address":null,
+      "City":null,
+      "Email":null,
+      "AccountNo":"7281991727"
+   },
+   "CDD":{
+      "PurposeOfRemittance":"8057",
+      "RelWithSender":"11083",
+      "SourceOfFund":null
+   },
+   "SCountryId":0,
+   "PCountryId":0,
+   "DeliveryMethodId":2,
+   "PBranchId":0,
+   "PBankId":2376,
+   "CollCurr":"MNT",
+   "PayoutCurr":"CNY",
+   "CollAmt":"40216",
+   "PayoutAmt":"100.0000",
+   "TransferAmt":"40196.0000",
+   "ServiceCharge":"20.0000",
+   "ExRate":"0.00248784258608573",
+   "CalBy":"p",
+   "TpExRate":"0.00248784258608573",
+   "TpPCurr":"CNY",
+   "PayOutPartnerId":0,
+   "ForexSessionId":"64F7E876-B6DA-4A5E-8A21-8A6085DD785F",
+   "PaymentType":"wallet",
+   "SourceType":"",
+   "ScDiscount":null,
+   "SchemeId":null,
+   "txnCompliance":{
+      "result":[
+         {
+            "answer":"YES",
+            "qId":"1",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"SALARY",
+            "qId":"2",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"MEDICAL EXPENSE",
+            "qId":"3",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"NO",
+            "qId":"4",
+            "qType":"dropdown"
+         }
+      ],
+      "txnType":"0"
+   },
+   "ProcessId":null,
+   "UserName":"oct15",
+   "ProviderId":"",
+   "SessionId":"",
+   "PBranch":null,
+   "RequestFrom":null,
+   "password":null
+}
+
+Chin Wallet:
+{
+   "SenderId":"95",
+   "SIpAddress":null,
+   "IsRealtime":false,
+   "RequestedBy":"mobile",
+   "Receiver":{
+      "ReceiverId":"132",
+      "FirstName":null,
+      "MiddleName":null,
+      "LastName":null,
+      "IdType":null,
+      "IdNo":null,
+      "IdIssue":null,
+      "IdExpiry":null,
+      "Dob":null,
+      "MobileNo":null,
+      "NativeCountry":null,
+      "StateId":0,
+      "DistrictId":0,
+      "Address":null,
+      "City":null,
+      "Email":null,
+      "AccountNo":""
+   },
+   "CDD":{
+      "PurposeOfRemittance":"8058",
+      "RelWithSender":"11083",
+      "SourceOfFund":null
+   },
+   "SCountryId":0,
+   "PCountryId":0,
+   "DeliveryMethodId":13,
+   "PBranchId":0,
+   "PBankId":0,
+   "CollCurr":"MNT",
+   "PayoutCurr":"CNY",
+   "CollAmt":"20118",
+   "PayoutAmt":"50.0000",
+   "TransferAmt":"20098.0000",
+   "ServiceCharge":"20.0000",
+   "ExRate":"0.00248784258608573",
+   "CalBy":"p",
+   "TpExRate":"0.00248784258608573",
+   "TpPCurr":"CNY",
+   "PayOutPartnerId":0,
+   "ForexSessionId":"5F29CA3D-0622-4CCD-8761-A84F9B618E9F",
+   "PaymentType":"wallet",
+   "SourceType":"",
+   "ScDiscount":null,
+   "SchemeId":null,
+   "txnCompliance":{
+      "result":[
+         {
+            "answer":"YES",
+            "qId":"1",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"SALARY",
+            "qId":"2",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"TUITION FEE",
+            "qId":"3",
+            "qType":"dropdown"
+         },
+         {
+            "answer":"NO",
+            "qId":"4",
+            "qType":"dropdown"
+         }
+      ],
+      "txnType":"0"
+   },
+   "ProcessId":null,
+   "UserName":"oct15",
+   "ProviderId":"",
+   "SessionId":"",
+   "PBranch":null,
+   "RequestFrom":null,
+   "password":null
+}
+
+Get Status:
+{
+  "ControlNo": "GA022102153552",
+  "PartnerPinNo": "GA022102153552",
+  "TranNo": null,
+  "IsFromPartnerPinNo": true,
+  "ProcessId": "",
+  "UserName": "",
+  "ProviderId": "394450",
+  "SessionId": "",
+  "PBranch": "",
+  "RequestFrom": "",
+  "password": ""
+}

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPaymentTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PinNo" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentTransactionResult" type="tns:GetPaymentTransactionResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetPaymentTransactionResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BenePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingTokenId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IncomeSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurposeOfRemittance" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pCurrCostRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCurrCostRate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmPaymentTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PinNo" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReceivingTokenId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecIdType" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecIdNumber" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecIdIssuePlace" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecIdIssueDate" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecDOB" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecOccupation" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPaymentTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmPaymentTransactionResult" type="tns:ConfirmPaymentTransactionResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConfirmPaymentTransactionResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmationId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PagentComm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankDepositTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankDepositTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankDepositTransactionResult" type="tns:ArrayOfGetBankDepositTransactionResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGetBankDepositTransactionResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetBankDepositTransactionResult" nillable="true" type="tns:GetBankDepositTransactionResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetBankDepositTransactionResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendingAgent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CutomerAdress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneMiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneNativeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BenePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransferAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScurrCostRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcurrCostRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankBranchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DownLoadTokenId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MarkBankDepositAsDownloaded">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DownLoadTokenId" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarkBankDepositAsDownloadedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarkBankDepositAsDownloadedResult" type="tns:AccountDepositMarkDownloadedResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountDepositMarkDownloadedResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MarkBankDepositAsPaid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="unbounded" name="PinNo" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarkBankDepositAsPaidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarkBankDepositAsPaidResult" type="tns:MarkBankDepositAsPaidResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MarkBankDepositAsPaidResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PinNo" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatusResult" type="tns:GetStatusResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetStatusResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingTokenId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReconcileReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PartnerId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserName" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SessionId" nillable="true" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaidDate" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReconcileReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReconcileReportResult" type="tns:ReconcileReportResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReconcileReportResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Details" type="tns:ArrayOfReturn_TransReportRow" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReturn_TransReportRow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Return_TransReportRow" nillable="true" type="tns:Return_TransReportRow" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Return_TransReportRow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeneName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaidDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingCurrency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPaymentTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmPaymentTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmPaymentTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDepositTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankDepositTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDepositTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankDepositTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkBankDepositAsDownloadedSoapIn">
+    <wsdl:part name="parameters" element="tns:MarkBankDepositAsDownloaded" />
+  </wsdl:message>
+  <wsdl:message name="MarkBankDepositAsDownloadedSoapOut">
+    <wsdl:part name="parameters" element="tns:MarkBankDepositAsDownloadedResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkBankDepositAsPaidSoapIn">
+    <wsdl:part name="parameters" element="tns:MarkBankDepositAsPaid" />
+  </wsdl:message>
+  <wsdl:message name="MarkBankDepositAsPaidSoapOut">
+    <wsdl:part name="parameters" element="tns:MarkBankDepositAsPaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReconcileReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ReconcileReport" />
+  </wsdl:message>
+  <wsdl:message name="ReconcileReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ReconcileReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GMEWebServiceSoap">
+    <wsdl:operation name="GetPaymentTransaction">
+      <wsdl:input message="tns:GetPaymentTransactionSoapIn" />
+      <wsdl:output message="tns:GetPaymentTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPaymentTransaction">
+      <wsdl:input message="tns:ConfirmPaymentTransactionSoapIn" />
+      <wsdl:output message="tns:ConfirmPaymentTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDepositTransaction">
+      <wsdl:input message="tns:GetBankDepositTransactionSoapIn" />
+      <wsdl:output message="tns:GetBankDepositTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsDownloaded">
+      <wsdl:input message="tns:MarkBankDepositAsDownloadedSoapIn" />
+      <wsdl:output message="tns:MarkBankDepositAsDownloadedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsPaid">
+      <wsdl:input message="tns:MarkBankDepositAsPaidSoapIn" />
+      <wsdl:output message="tns:MarkBankDepositAsPaidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <wsdl:input message="tns:GetStatusSoapIn" />
+      <wsdl:output message="tns:GetStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReconcileReport">
+      <wsdl:input message="tns:ReconcileReportSoapIn" />
+      <wsdl:output message="tns:ReconcileReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GMEWebServiceSoap" type="tns:GMEWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPaymentTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetPaymentTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPaymentTransaction">
+      <soap:operation soapAction="http://tempuri.org/ConfirmPaymentTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDepositTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetBankDepositTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsDownloaded">
+      <soap:operation soapAction="http://tempuri.org/MarkBankDepositAsDownloaded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsPaid">
+      <soap:operation soapAction="http://tempuri.org/MarkBankDepositAsPaid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap:operation soapAction="http://tempuri.org/GetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconcileReport">
+      <soap:operation soapAction="http://tempuri.org/ReconcileReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GMEWebServiceSoap12" type="tns:GMEWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPaymentTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetPaymentTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPaymentTransaction">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmPaymentTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDepositTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetBankDepositTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsDownloaded">
+      <soap12:operation soapAction="http://tempuri.org/MarkBankDepositAsDownloaded" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkBankDepositAsPaid">
+      <soap12:operation soapAction="http://tempuri.org/MarkBankDepositAsPaid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReconcileReport">
+      <soap12:operation soapAction="http://tempuri.org/ReconcileReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GMEWebService">
+    <wsdl:port name="GMEWebServiceSoap" binding="tns:GMEWebServiceSoap">
+      <soap:address location="https://payapi.gmeremit.com:8003/PayWSApi/GMEWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GMEWebServiceSoap12" binding="tns:GMEWebServiceSoap12">
+      <soap12:address location="https://payapi.gmeremit.com:8003/PayWSApi/GMEWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

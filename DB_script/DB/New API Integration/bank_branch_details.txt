@@ -1,0 +1,9 @@
+INDIA ====>Bank Done (cash pickup data not on excel list)
+Brazil ===> not on excel file
+CAMBODIA ====> branch not found on excel file for bank deposti
+Indonesia ====> branch not found on excel file for bank deposti
+Malaysia ====> branch not found on excel file for bank deposti
+Nepal ====> branch not found on excel file for bank deposti
+Pakistan ====> branch not found on excel file for bank deposti
+Philippines ====> branch not found on excel file for bank deposti
+China ====> branch not found on excel file for bank deposti

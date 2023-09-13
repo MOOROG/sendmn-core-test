@@ -1,0 +1,165 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DailySettlementRpt.aspx.cs" Inherits="Swift.web.AccountReport.DailySettlemetReport.DailySettlementRpt" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Bootstrap Core CSS -->
+    <link href="../../ui/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../ui/css/datepicker-custom.css" rel="stylesheet" />
+    <link href="../../js/jQuery/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../ui/css/waves.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../ui/css/menu.css" type="text/css" rel="stylesheet" />
+    <link href="../../ui/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../ui/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../../js/functions.js"></script>
+    <script type="text/javascript" src="../../ui/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../ui/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../ui/js/metisMenu.min.js"></script>
+    <script type="text/javascript" src="../../ui/js/custom.js"></script>
+    <script type="text/javascript">
+        function CheckFormValidation() {
+            var startDate = $("#startDate").val();
+            var endDate = $("#toDate").val();
+
+            var url = "/AccountReport/Reports.aspx?reportName=dailySettlementRpt&fromDate=" + startDate + "&toDate=" + endDate;
+            OpenInNewWindow(url);
+        }
+        function CheckFormValidation2() {
+            var reqField = "icn,";
+            if (ValidRequiredField(reqField) == false) {
+                return false;
+            }
+            var icn = $("#icn").val();
+
+            var url = "/AccountReport/Reports.aspx?reportName=individualTxnRpt&icn=" + icn;
+            OpenInNewWindow(url);
+        }
+    </script>
+</head>
+<body>
+    <form id="Form1" name="repform" runat="server">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title">
+                        <h1>Day Book <small></small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li><a href="../../Front.aspx" target="mainFrame"><i class="fa fa-home"></i></a></li>
+                            <li>Account Report</li>
+                            <li class="active">Daily Settlement Report</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- end .page title-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default recent-activites">
+                        <!-- Start .panel -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Daily Settlement Report
+                            </h4>
+                            <div class="panel-actions">
+                                <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-lg-2 col-md-3 control-label" for="">
+                                    From Date:</label>
+                                <div class="col-lg-10 col-md-9">
+                                    <div class="input-group m-b">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                        <asp:TextBox ID="startDate" runat="server" CssClass="form-control form-control-inline input-medium default-date-picker"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End .form-group  -->
+                            <div class="form-group">
+                                <label class="col-lg-2 col-md-3 control-label" for="">
+                                    To Date:</label>
+                                <div class="col-lg-10 col-md-9">
+                                    <div class="input-group m-b">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                        <asp:TextBox ID="toDate" runat="server" CssClass="form-control form-control-inline input-medium default-date-picker"></asp:TextBox>
+                                    </div>
+                                    <!-- End .row -->
+                                </div>
+                            </div>
+                            <!-- End .form-group  -->
+                            <div class="form-group">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <input type="button" value="Search" class="btn btn-primary m-t-25" onclick="CheckFormValidation();" />
+                                </div>
+                            </div>
+                            <!-- End .form-group  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default recent-activites">
+                        <!-- Start .panel -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Individual Txn Search</h4>
+                            <div class="panel-actions">
+                                <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <!-- End .form-group  -->
+                            <div class="form-group">
+                                <label class="col-lg-2 col-md-3 control-label" for="">
+                                    BRN:</label>
+                                <div class="col-lg-10 col-md-9">
+                                    <%-- <asp:TextBox ID="toDate2" runat="server" CssClass="form-control"></asp:TextBox>--%>
+                                    <asp:TextBox ID="icn" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <!-- End .row -->
+                                </div>
+                            </div>
+                            <!-- End .form-group  -->
+                            <div class="form-group">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <input type="button" value="Search" onclick="CheckFormValidation2();" class="btn btn-primary m-t-25" />
+                                </div>
+                            </div>
+                            <!-- End .form-group  -->
+                        </div>
+                    </div>
+                    <!-- End .panel -->
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--script--->
+    <script type="text/javascript" src="../../ui/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../ui/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../ui/js/bootstrap-datepicker.js"></script>
+    <script src="../../ui/js/pickers-init.js"></script>
+    <script src="../../ui/js/jquery-ui.min.js"></script>
+
+    <script src="../../ui/js/metisMenu.min.js"></script>
+    <script src="../../ui/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <!-- Flot -->
+    <script src="../../ui/js/flot/jquery.flot.js"></script>
+    <script src="../../ui/js/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../ui/js/flot/jquery.flot.resize.js"></script>
+    <script src="../../ui/js/flot/jquery.flot.pie.js"></script>
+    <script src="../../ui/js/chartjs/Chart.min.js"></script>
+    <script src="../../ui/js/pace.min.js"></script>
+    <script src="../../ui/js/waves.min.js"></script>
+    <script src="../../ui/js/jquery-jvectormap-world-mill-en.js"></script>
+    <!--        <script src="js/jquery.nanoscroller.min.js"></script>-->
+    <script type="text/javascript" src="../../ui/js/custom.js"></script>
+</body>
+</html>

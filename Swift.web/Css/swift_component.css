@@ -1,0 +1,232 @@
+﻿/**************Design for form*******************/
+.container {
+    font: 11px verdana, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+    .container td {
+        text-align: left;
+    }
+
+.container_tmid div, .container_tmid_big div, .container_header {
+    color: #FFFFFF;
+    font: 14px verdana, Helvetica, sans-serif bold;
+}
+
+.container_tl div {
+    width: 7px;
+}
+
+.container_tmid div {
+    height: 22px;
+}
+
+.container_tmid_big div {
+    height: 38px;
+}
+
+.container_tmid div, .container_tmid_big div {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 7px;
+    padding-top: 10px;
+}
+
+.container_tl {
+    background-image: url(/Images/container-tl_big.gif);
+}
+
+.container_tmid, .container_tmid_big {
+    background-color: #3A4F63;
+    background-repeat: repeat-x;
+    border-bottom: 2px solid white;
+}
+
+.container_tr {
+    background-image: url(/Images/container-tr_big.gif);
+}
+
+.container_l {
+    background: url(/Images/container-left.gif) repeat-y;
+}
+
+.container_content, .container_content td, .container_content th {
+    background-color: #f3f3f3;
+    font: 11px verdana, Helvetica, sans-serif;
+    color: #191919;
+}
+
+.container_r {
+    background: url(/Images/container-right.gif) repeat-y;
+}
+
+.container_bl {
+    background-image: url(/Images/container-bl.gif);
+}
+
+.container_bmid {
+    background: transparent url(/Images/container-bottom.gif) repeat-x scroll 0 0;
+    height: 12px;
+}
+
+.container_br {
+    background-image: url(/Images/container-br_8.gif);
+}
+
+.container_tr div {
+    width: 8px;
+}
+
+.container .footerDS {
+    background: url(/Images/container-bottom.gif) repeat-x;
+}
+
+.container_content {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/**************End Design for form*******************/
+
+/***************** Grid top Heading*******************/
+/*.BredCurm{
+	background:url(../images/arrowright.gif) no-repeat;
+    height:20px;
+    width: 700px;
+    padding-left:25px;
+    font-size:11px;
+    margin-left:10px;
+    padding-bottom:2px;
+    xcolor: #999999;
+    color:Black;
+    font-weight:bold;
+    border-bottom:1px solid #EFEFEF;
+    text-transform:uppercase;
+    vertical-align:top;
+}*/
+
+.GridTextNormal {
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+}
+
+/*****************end Grid top Heading************/
+
+/****************** start Grid component**********/
+
+.HeaderStyle {
+    background: transparent url(/Images/backgroundCenter.png) repeat-x scroll center top;
+    text-align: left;
+    height: 30px;
+    vertical-align: middle;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    color: White;
+}
+
+TH.GridHeader {
+    background: url(Images/backgroundCenter.png) repeat-x scroll left center;
+    font-family: Verdana, Helvetica, Sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    height: 30px;
+}
+
+A.GridHeader {
+    COLOR: #EDEDED;
+    FONT-FAMILY: verdana, verdana, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+
+    A.GridHeader:HOVER {
+        COLOR: red;
+        TEXT-DECORATION: underline;
+    }
+
+    A.GridHeader:VISITED {
+    }
+
+    A.GridHeader:ACTIVE {
+    }
+
+.GridUnselectedIndex {
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: 600;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: underline;
+}
+
+.GridSelectedIndex {
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: 600;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: underline;
+}
+
+.GridOddRow {
+    BACKGROUND-COLOR: #FFFFFF;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+}
+
+.GridOddRowOver {
+    BACKGROUND-COLOR: #FFCC99;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+}
+
+.GridEvenRow {
+    BACKGROUND-COLOR: #F7F3F7;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+}
+
+.GridEvenRowOver {
+    BACKGROUND-COLOR: #FFCC99;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, Sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+}
+
+#GridTemplate {
+    BORDER-COLLAPSE: collapse;
+}
+
+.text_form {
+    color: #000000;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.textformat {
+    color: #000000;
+    font-family: verdana;
+    font-weight: bold;
+    text-align: right;
+}
+
+/******************* end grid component******************/
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}

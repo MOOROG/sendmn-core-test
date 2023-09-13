@@ -1,0 +1,13 @@
+﻿.bredCrom {
+    background: url("../images/arrowright.gif") no-repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #CACACA;
+    color: navy;
+    font-family: 'Trebuchet MS';
+    font-size: 13px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 18px;
+    margin: 4px 0 5px;
+    padding-left: 25px;
+    text-transform: uppercase;
+}

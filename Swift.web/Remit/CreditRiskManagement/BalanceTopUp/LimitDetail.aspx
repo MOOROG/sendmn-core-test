@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LimitDetail.aspx.cs" Inherits="Swift.web.Remit.CreditRiskManagement.BalanceTopUp.LimitDetail" %>

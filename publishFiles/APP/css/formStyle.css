@@ -1,0 +1,246 @@
+﻿/* Contents of this file is commented until further testing */
+/* Container Classes */
+
+/*.container100
+{
+    width:820px;
+}
+.container80
+{
+    width:650px;
+}
+.container60
+{
+    width:60%;
+}
+.container40
+{
+    width:40%;
+}
+
+.centerDiv
+{
+    margin:0 auto;
+}
+.outerFormDiv
+{
+    border: 1px solid #CCCCCC;
+    background: #F2F2F2;
+    margin:5px 10px;
+}
+
+.formTable
+{
+    background:none repeat scroll 0 0 #F2F2F2;
+    border: 1px solid #CACACA;
+    color: #3A4F63;
+    font: normal 12px Arial, Helvetica, sans-serif;
+    padding: 2px;
+    margin-top:0px;
+    width:100%;
+    margin-left:10px;
+}
+
+.formTable .frmTitle
+{
+	background:none repeat scroll 0 0 #3A4F63;
+	font:bold 12px Verdana;
+	color: #FFFFFF;
+	padding:5px;
+    text-align: left !important;
+}
+
+.smoothCorner
+{
+    border-radius:3px;
+}
+
+.sendDialogBox
+{
+    margin-left:10px;
+    width:600px;
+    border:1px solid #CACACA;
+    padding:3px 10px;
+    background:#F2F2F2;
+    font-size:12px;
+    margin-bottom:5px;
+}
+
+.sendCss
+{
+    background: #F2F2F2;
+    font: normal 12px Arial, Helvetica, sans-serif;
+    color: #3A4F63;
+    padding: 2px;
+    margin-top: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.tdClass
+{
+    padding-left: 10px;
+    width:100px;
+}
+
+.lblRed
+{
+    color:Red;
+    font-weight:600;
+    padding-left:5px;
+    line-height:22px;
+}
+.calendar1
+{
+    width:140px;
+    margin-right:5px;
+    border-radius:3px;
+    height:20px;
+}
+.ui-datepicker-trigger
+{
+    margin-bottom:-3px;
+}
+
+.formTable tr .fromHeadMessage
+{
+    font: 11px Verdana;
+    padding: 4px 5px;
+    text-align: left;
+}
+.aspNetDisabled
+{
+    background-color:#F7F7F7;
+}
+
+.narration
+{
+    line-height:20px;
+    height:42px;
+}
+.narration80
+{
+    width:475px;
+    line-height:20px;
+    height:42px;
+}
+
+.narration60
+{
+    width:400px;
+    line-height:20px;
+    height:42px;
+}
+
+.formTable tr td {
+    padding: 2px;
+}
+.tdClass
+{
+    padding-left: 10px !important;
+    width:100px;
+}
+.formInfoTable {
+    background-color:#F9EDEF;
+    border:1px solid #CACACA;
+    width:60%;
+}
+
+input
+{
+    height:18px !important;
+}
+
+input:focus, select:focus
+{
+    background-color: #FFFFD2;
+    font-weight: normal;
+}
+
+.ErrMsg {
+    color: Red;
+    font: bold 10px 'Times New Roman';
+    padding: 2px;
+    text-align: left;
+}
+
+/* New Additions */
+/*
+* {
+	font-family: normal Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+input, select, label, fieldset, textarea {
+	font-family: normal Arial,Helvetica,sans-serif;
+    font-size: 13px;
+	margin:1px 2px;
+}
+input, select, textarea, fieldset {
+    border: 1px solid #C9C9C9;
+    border-radius: 3px 3px 3px 3px;
+    min-width: 30px;
+}
+
+input[type="text"], input[type="textfield"], input[type="email"], input[type="password"] {
+	height:18px;
+	padding:1px 3px;
+	min-width:120px;
+}
+textarea {
+	padding:1px 3px;
+	min-width:120px;
+}
+select {
+	height:22px !important;
+	padding:1px 1px 1px 2px;
+	min-width:120px;
+}
+
+input:focus, select:focus, textarea:focus {
+	background:#FFC;
+	font-weight:600;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    background: url("../images/btn_bg_active.gif") repeat-x scroll left center #FFA822;
+    font-size: 11px;
+    font-weight: 600;
+    min-height: 20px;
+    min-width: 80px;
+    padding: 0 10px;
+    color: #666666;
+    cursor: pointer;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+	background:url("../images/btn_bg_hover.gif") repeat-x scroll left center #FFA822;
+}
+input[type="button"][disabled="disabled"], input[type="submit"][disabled="disabled"], input[type="reset"][disabled="disabled"] {
+	background:url("../images/btn_bg_deactive.gif") repeat-x scroll left center #FFA822;
+}
+input[disabled="disabled"], select[disabled="disabled"], textarea[disabled="disabled"] {
+	background:#EAEAEA;
+}
+input[readonly="readonly"] {
+	background:#EFEFEF;
+}
+input[readonly="readonly"]:focus {
+	font-weight:normal;
+}
+legend {
+	padding:0 3px;
+	font-weight:600;
+	color:#D2A044;
+}
+a {
+	color:#333;
+	text-decoration:none;
+	padding:0px 3px;
+}
+a:hover {
+	color:#999;
+}
+.amtField, .dateField {
+	text-align:right;
+	min-width:120px;
+}
+*/

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CkeditorForASP.NET</id>
+    <version>3.6.4.0</version>
+    <title>CkeditorForASP.NET</title>
+    <authors>ckeditor</authors>
+    <owners>ckeditor</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ASP.NET control for Ckeditor</description>
+    <summary />
+    <dependencies>
+      <dependency id="CKEditor" version="3.6.4" />
+    </dependencies>
+  </metadata>
+</package>

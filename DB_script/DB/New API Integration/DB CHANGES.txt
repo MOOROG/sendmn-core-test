@@ -1,0 +1,10 @@
+proc_GetHoldedTxnForApprovedByAdmin:  NEW FLAG FOR TRANGLO ADDED
+Vw_GetAgentID: TRANGLO SUPER AGENT ID ADDED
+PROC_MOBILE_DYNAMIC_RECEIVERDETAILS: logic to show account number for wallet added in sp (in select bank list query), account validation realtime,
+in case of china union pay, put hard code account validation.
+
+proc_SendTransaction:
+UPDATE CODE FOR @pBankName, AND @pBankBranchName
+TO SELECT BANK NAME FROM API_BANK_LIST TABLE INSTEAD OF agentMaster
+
+New sp for webhook: PROC_TRANGLO_SYNC_STATUS

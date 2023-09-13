@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80429C0A-EC99-4D4B-ADE1-C4AEF5BE5490}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Swift.API</RootNamespace>
+    <AssemblyName>Swift.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Authenticator, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleAuthenticator.1.2.1\lib\net40\Google.Authenticator.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.HttpUtility, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.HttpUtility.1.0.0.1\lib\net40\Mono.HttpUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq.Portable, Version=1.4.18916.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoreLinq.Portable.1.4.0\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\MoreLinq.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BankDeposit\WithdrawWalletRequestModel.cs" />
+    <Compile Include="Common\CancelTxn\CancelTxnRequest.cs" />
+    <Compile Include="Common\Cancel\CancelTxn.cs" />
+    <Compile Include="Common\EncryptDecryptUtility.cs" />
+    <Compile Include="Common\ErrorJson.cs" />
+    <Compile Include="Common\ExchangeRate.cs" />
+    <Compile Include="Common\ExchangeRateResponse.cs" />
+    <Compile Include="Common\ExrateCurrency.cs" />
+    <Compile Include="Common\ExRate\ExRateRequest.cs" />
+    <Compile Include="Common\ExRate\ExRateResponse.cs" />
+    <Compile Include="Common\GoogleAuthenticatorModel.cs" />
+    <Compile Include="Common\MapAPIData\APIBankModel.cs" />
+    <Compile Include="Common\OrderCancel.cs" />
+    <Compile Include="Common\PayerDataRequest.cs" />
+    <Compile Include="Common\PayTransaction\CommonParam.cs" />
+    <Compile Include="Common\PayTransaction\PayTxnCheck.cs" />
+    <Compile Include="Common\PayTransaction\PayTxnConfirm.cs" />
+    <Compile Include="Common\Replenishment.cs" />
+    <Compile Include="Common\RestApiClient.cs" />
+    <Compile Include="Common\RiaTxnDownload.cs" />
+    <Compile Include="Common\SendTxnRequest.cs" />
+    <Compile Include="Common\SendTxn\SendTransactionRequest.cs" />
+    <Compile Include="Common\SendTxn\TxnAgent.cs" />
+    <Compile Include="Common\SendTxn\TxnReceiver.cs" />
+    <Compile Include="Common\SendTxn\TxnSender.cs" />
+    <Compile Include="Common\SendTxn\TxnTransaction.cs" />
+    <Compile Include="Common\SMS\SMSRequestModel.cs" />
+    <Compile Include="Common\SyncModel\AddressRequest.cs" />
+    <Compile Include="Common\SyncModel\Bank\BankRequest.cs" />
+    <Compile Include="Common\SyncModel\Bank\BankResponse.cs" />
+    <Compile Include="Common\SyncModel\City\CityResponse.cs" />
+    <Compile Include="Common\SyncModel\CommonRequest.cs" />
+    <Compile Include="Common\SyncModel\Polaris\PolarisDictionary.cs" />
+    <Compile Include="Common\SyncModel\Polaris\PolarisModels.cs" />
+    <Compile Include="Common\SyncModel\State\StateResponse.cs" />
+    <Compile Include="Common\SyncModel\Town\TownResponse.cs" />
+    <Compile Include="Common\TFReleaseTxnRequest.cs" />
+    <Compile Include="Common\TransactionDataRequest.cs" />
+    <Compile Include="Common\TransactionDataResponse.cs" />
+    <Compile Include="Dao.cs" />
+    <Compile Include="DbResult.cs" />
+    <Compile Include="GlobalBank\GlobalBankAPI.cs" />
+    <Compile Include="GlobalBank\GblSendTransactionRequest.cs" />
+    <Compile Include="GoogleAuthenticator\GoogleAuthenticatorAPI.cs" />
+    <Compile Include="MapAPIData\DownloadAPIData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdPartyApiServices\CancelRequestServices.cs" />
+    <Compile Include="ThirdPartyApiServices\DAL_BankDeposit\BankDepositService.cs" />
+    <Compile Include="ThirdPartyApiServices\DAL_BankDeposit\IBankDepositService.cs" />
+    <Compile Include="ThirdPartyApiServices\ExchangeRateAPIService.cs" />
+    <Compile Include="ThirdPartyApiServices\PayTransaction\IPayTransactionApiService.cs" />
+    <Compile Include="ThirdPartyApiServices\PayTransaction\PayTransactionApiService.cs" />
+    <Compile Include="ThirdPartyApiServices\SendSMSApiService.cs" />
+    <Compile Include="ThirdPartyApiServices\SendTransactionServices.cs" />
+    <Compile Include="ThirdPartyApiServices\SyncBankAndBranchService.cs" />
+    <Compile Include="ThirdPartyApiServices\SyncStateCityTownService.cs" />
+    <Compile Include="ThirdPartyApiServices\ThirdPartyAPI.cs" />
+    <Compile Include="ThirdPartyApiServices\TransactionDataService.cs" />
+    <Compile Include="ThirdPartyApiServices\XypGetDataService.cs" />
+    <Compile Include="TPAPIs\KFTC\IKFTCAccountCancel.cs" />
+    <Compile Include="TPAPIs\KFTC\KFTCAccountCancel.cs" />
+    <Compile Include="TPAPIs\MerchatradePushAPI\IMerchantradeAPIService.cs" />
+    <Compile Include="TPAPIs\MerchatradePushAPI\MerchantradeAPIService.cs" />
+    <Compile Include="TPAPIs\MerchatradePushAPI\MtradeGetExRate.cs" />
+    <Compile Include="TPAPIs\MerchatradePushAPI\MtradePushDetail.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Web References\uat_com.global.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.global.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\uat_com.global.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\uat_com.global.www\RemoteRemit.wsdl" />
+    <None Include="Web References\com.global.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.global.www\RemoteRemit.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\Projects\Swift\Malaysia\IME_MALAYSIA_LIVE\APP\Swift.API\Web References\com.global.www\RemoteRemit.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.global.www\</RelPath>
+      <UpdateFromURL>D:\Projects\Swift\Malaysia\IME_MALAYSIA_LIVE\APP\Swift.API\Web References\com.global.www\RemoteRemit.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Swift_API_com_global_www_RemoteRemit</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://103.19.88.222:8080/globalWebService/services/RemoteRemit%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\uat_com.global.www\</RelPath>
+      <UpdateFromURL>http://103.19.88.222:8080/globalWebService/services/RemoteRemit%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Swift_API_com_global_www_RemoteRemit</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

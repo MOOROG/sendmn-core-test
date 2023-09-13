@@ -1,0 +1,55 @@
+1. proc_settlementDdl
+	line no : 42,43,78,79,80,81,108,109,138,139,140,141,165,166,194,195,196,197,221,223,251,252,253,254
+	replace 47-50 with 52-57
+2. PROC_API_ROUTE_PARTNERS
+	line no: 24,43,44,45,49,50,70,71,76,77,105,128,280,292
+3. proc_online_core_customerSetup
+	line no:1081,
+4. proc_online_receiverSetup
+	line no: 395,
+5. proc_settlement_v2
+	line no : 295,296,297,298,299,300,301 (latest db code), 351,352,353,481-496
+6. altertableTblPartnerwiseCountry
+
+7. proc_staticDataValue
+	line no: 44 change to 45 logic
+8. proc_daybook
+	line no: 81-126
+
+9. ALTER TABLE tranModifyLog ALTER COLUMN [message] NVARCHAR(1000) NULL
+
+10. proc_transactionView
+	line no:10,152('MNT'--ISNULL(pAgentCommCurrency,0)),
+	197,198,209
+
+11. proc_cancelTran
+	line no :37,134,135, 572-579
+
+12. ALTER TABLE dbo.remitTran ALTER COLUMN oldSysTranNo NVARCHAR(100) NULL
+
+13. Proc_SyncData
+	line no: 9,15,35-67,172-184
+
+14. spa_saveTempTrnUSD
+	line no: 283-300
+15. Proc_RiaCashHistory
+	line no:126-130,186,233,430,431,466
+16. proc_dropDownLists2
+	line no: 438-445
+17. API_BANK_LIST	
+	line no : 75
+18. proc_sendPageLoadData
+	line no: 503
+19. Proc_ThirdpartyCashHistory
+	line no : 133,140,141,146
+20. PROC_MOBILE_DYNAMIC_RECEIVERDETAILS
+	line no:165,187
+21. proc_SendTransaction
+	line no: 377,428
+
+22. add menu for receiver field setup.sql ===> add new file
+23. PROC_MOBILE_DYNAMIC_RECEIVERDETAILS
+	line no: 168
+
+24. PROC_MOBILE_RECEIVER_INFORMATION
+	line no:239-243,262

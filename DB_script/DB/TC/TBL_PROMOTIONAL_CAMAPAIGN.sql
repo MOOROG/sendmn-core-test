@@ -1,0 +1,85 @@
+
+EXEC proc_sendPageLoadData @flag = 'agentsetting', @user = 'lethi', @countryId = '151', @agentId = null, @deliveryMethodId = '1', @pBankType = null
+EXEC [PROC_PROMOTIONAL_CAMPAIGN] @flag = 'S'  ,@pageNumber='1', @pageSize='10', @sortBy='ROW_ID', @sortOrder='ASC', @user = 'admin', @COUNTRY_ID = '42', @PAYMENT_METHOD = '13'
+
+
+SELECT * FROM TBL_PROMOTIONAL_CAMAPAIGN
+SELECT * FROM TBL_PROMOTIONAL_CAMAPAIGN_MOD
+SELECT * FROM TBL_PROMOTIONAL_CAMAPAIGNHISTORY
+
+CREATE TABLE TBL_PROMOTIONAL_CAMAPAIGN
+(
+	ROW_ID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY
+	,PROMOTIONAL_CODE VARCHAR(20)
+	,PROMOTIONAL_MSG VARCHAR(250)
+	,PROMOTION_TYPE INT
+	,PROMOTION_VALUE MONEY
+	,START_DT DATE
+	,END_DT DATE
+	,COUNTRY_ID INT
+	,PAYMENT_METHOD INT
+	,IS_ACTIVE BIT
+	,createdBy VARCHAR(50)
+	,createdDate DATETIME
+	,approvedBy VARCHAR(50)
+	,approvedDate DATETIME
+	,modifiedBy VARCHAR(50)
+	,modifiedDate DATETIME
+)
+
+
+CREATE TABLE TBL_PROMOTIONAL_CAMAPAIGNHISTORY
+(
+	ID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY
+	,ROW_ID INT NOT NULL
+	,PROMOTIONAL_CODE VARCHAR(20)
+	,PROMOTIONAL_MSG VARCHAR(250)
+	,PROMOTION_TYPE INT
+	,PROMOTION_VALUE MONEY
+	,START_DT DATE
+	,END_DT DATE
+	,COUNTRY_ID INT
+	,PAYMENT_METHOD INT
+	,IS_ACTIVE BIT
+	,createdBy VARCHAR(50)
+	,createdDate DATETIME
+	,approvedBy VARCHAR(50)
+	,approvedDate DATETIME
+	,modifiedBy VARCHAR(50)
+	,modifiedDate DATETIME
+)
+
+CREATE TABLE TBL_PROMOTIONAL_CAMAPAIGN_MOD
+(
+	ROW_ID INT NOT NULL
+	,PROMOTIONAL_CODE VARCHAR(20)
+	,PROMOTIONAL_MSG VARCHAR(250)
+	,PROMOTION_TYPE INT
+	,PROMOTION_VALUE MONEY
+	,START_DT DATE
+	,END_DT DATE
+	,modType CHAR(1)
+	,COUNTRY_ID INT
+	,PAYMENT_METHOD INT
+	,IS_ACTIVE BIT
+	,createdBy VARCHAR(50)
+	,createdDate DATETIME
+	,approvedBy VARCHAR(50)
+	,approvedDate DATETIME
+	,modifiedBy VARCHAR(50)
+	,modifiedDate DATETIME
+)
+
+
+update  staticdatatype set isInternal=0 WHERE typeid =8102
+
+INSERT INTO staticdatatype
+SELECT '8102', 'Promotion Type', 'Promotion Type', 1, getdate(), 'system', null, null
+
+select * from changesApprovalSettings where functionid='20320000'
+insert into changesApprovalSettings
+select '20320020', 'TBL_PROMOTIONAL_CAMAPAIGN', 'TBL_PROMOTIONAL_CAMAPAIGN_MOD', 'ROW_ID', 'PROC_PROMOTIONAL_CAMPAIGN', 'Promotional Campaign Setup'
+
+SELECT * FROM changesApprovalSettings WITH(NOLOCK) WHERE functionId = '20320020'
+
+

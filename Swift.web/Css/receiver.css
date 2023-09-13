@@ -1,0 +1,94 @@
+.receiverPrint * {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.receiverPrint .header-info {
+    font-size: 12px;
+}
+
+.receiverPrint .logo {
+    width: 360px;
+}
+
+    .receiverPrint .logo img {
+        width: 100%;
+    }
+
+
+.receiverPrint hr {
+    height: 2px;
+    background: #000;
+    margin: 5px 0;
+}
+
+.receiverPrint h2,
+.receiverPrint h2 span {
+    padding: 0;
+    margin: 3px 0;
+    font-size: 18px;
+}
+
+.receiverPrint h3 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    margin: 3px 0;
+}
+
+    .receiverPrint h3 span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+.receiverPrint .tright {
+    text-align: right;
+}
+
+.receiverPrint .tleft {
+    text-align: left;
+}
+
+.receiverPrint .tcenter {
+    text-align: center;
+}
+
+.receiverPrint .copy p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+.receiverPrint label {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.receiverPrint .info {
+    text-transform: uppercase;
+}
+
+.receiverPrint .info-data {
+    border-collapse: collapse;
+}
+
+    .receiverPrint .info-data tr:nth-child(odd) {
+        background-color: #ccc;
+    }
+
+    .receiverPrint .info-data td {
+        padding: 4px;
+        margin: 0;
+    }
+
+    .receiverPrint .info-data td {
+        border-bottom: 1px solid #ddd;
+    }
+
+.receiverPrint .highlight_info {
+    color: #004fab;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: underline;
+}

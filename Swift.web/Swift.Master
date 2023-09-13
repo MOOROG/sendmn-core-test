@@ -1,0 +1,111 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Swift.Master.cs" EnableViewState="false" Inherits="Swift.web.Swift" %>
+<%@ Import Namespace="Swift.web.Library" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>IME Remittance System 1.0 !</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <script src="greybox/AJS.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var tim;
+        document.onkeydown = KeyDownHandler;
+        document.onkeyup = KeyUpHandler;
+
+        var oldMenuId = "divMenu";
+        var CTRL = false;
+        var SHIFT = false;
+        var ALT = false;
+        var CHAR_CODE = -1;
+
+        function KeyDownHandler(e) {
+            var x = '';
+            if (document.all) {
+                var evnt = window.event;
+                x = evnt.keyCode;
+            }
+            else {
+                x = e.keyCode;
+            }
+            DetectKeys(x, true);
+            Lock();
+        }
+        function KeyUpHandler(e) {
+            var x = '';
+            if (document.all) {
+                var evnt = window.event;
+                x = evnt.keyCode;
+            }
+            else {
+                x = e.keyCode;
+            }
+            DetectKeys(x, false);
+            Lock();
+
+        }
+        function DetectKeys(KeyCode, IsKeyDown) {
+            if (KeyCode == '16') {
+                SHIFT = IsKeyDown;
+                CHAR_CODE = -1;
+            }
+            else if (KeyCode == '17') {
+                CTRL = IsKeyDown;
+                CHAR_CODE = -1;
+            }
+            else if (KeyCode == '18') {
+                ALT = IsKeyDown;
+                CHAR_CODE = -1;
+            }
+            else {
+                if (IsKeyDown)
+                    CHAR_CODE = KeyCode;
+                else
+                    CHAR_CODE = -1;
+            }
+        }
+        function Lock() {
+            if (CTRL && CHAR_CODE == 76) {
+                PopUpLockScreen();
+            }
+        }
+        function PopUpLockScreen() {
+            var param = "dialogHeight:1500px;dialogWidth:1500px;dialogLeft:0;dialogTop:-50px;center:yes";
+            var res = PopUpWindow("/Lock.aspx", param);
+            if (res == "undefined" || res == null)
+                PopUpLockScreen();
+            else if (res == "0") { }
+            else if (res == "-1") {
+                window.location.replace("/Logout.aspx");
+            }
+        }
+        
+      
+    </script>
+</head>
+<body >
+    <form id="form1" runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+       
+        <div id="MainPlaceHolderMainDiv" style = "align:left; width:1024px;">
+            <link href="css/style.css" rel="stylesheet" type="text/css" />
+            <link href="css/swift_component.css" rel="stylesheet" type="text/css" />
+            <asp:ContentPlaceHolder ID="MainPlaceHolder" runat="server">
+                <p style="width:333%; height: 23px; margin-bottom: 0px;">&nbsp;</p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    var urlRoot = "<%=GetStatic.GetUrlRoot() %>";
+
+    function PopUpTransaction(popUpUrl) {
+        var url = urlRoot + popUpUrl;
+        var param = "dialogHeight:1500px;dialogWidth:1500px;dialogLeft:0;dialogTop:0;center:yes";
+        this.PopUpWindow(url, param);
+    }
+ 
+</script>
+
+
+

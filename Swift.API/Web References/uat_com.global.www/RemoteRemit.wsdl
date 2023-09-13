@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://global.service.ntech" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://global.service.ntech" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://global.service.ntech">
+      <xs:element name="ReDownloadRemoteThirdBankRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReDownloadRemoteThirdBankRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessThirdParty">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefAddress" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefMobile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefCardType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefCardNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefStateName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefStateId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefCityId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefCountryIsoCode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="transactionDate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefGender" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="relation" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefOccupationId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remittanceReasonId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefDoB" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="idExpirationDate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="receivingAmount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field3" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessThirdPartyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessRemoteThirdBankRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="tokenId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field2" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessRemoteThirdBankRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessRemoteRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="tokenId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefIdType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefIdNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field2" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessRemoteRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCashExpressRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="tokenId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefNationalityId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefNationalityStr" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="placeOfIssue" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefProofTypeId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefProofTypeIdStr" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefProofIdExpDt" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="purposeOfReceiving" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefMobile" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessCashExpressRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MarkDownloadedThirdBankRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="downloadId" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field2" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MarkDownloadedThirdBankRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetThirdParty">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="field3" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetThirdPartyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteVostroAccDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="accNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteVostroAccDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteTransactionDetailStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteTransactionDetailStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteTransactionDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteTransactionDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteStatusDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="controlNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteStatusDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteLocalStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteLocalStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteFxRate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteFxRateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteAccountDetail">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="accNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRemoteAccountDetailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRegion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRegionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCashExpressRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCashExpressRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBranch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="bankCode" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBranchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBank">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBankResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgent">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="bankCode" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="regionCode" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAgentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadRemoteThirdBankRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DownloadRemoteThirdBankRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelRemoteRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelRemoteRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AmendRemoteTxn">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="radNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="accNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="oldBenefName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AmendRemoteTxnResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRemoteRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="controlNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefAddress" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefTel" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefMobile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefIdType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefAccIDNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderAddress" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderTel" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderMobile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderIdType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderIdNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="purpose" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remitType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="payingBankBranchCd" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rCurrency" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="localAmount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="serviceCharge" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rCommission" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="exchangeRate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="refNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="newAccount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="customerDOB" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRemoteRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRemoteLocalRemit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="controlNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefAddress" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefTel" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefMobile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefIdType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="benefAccIDNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderAddress" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderTel" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderMobile" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderIdType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="senderIdNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="purpose" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remitType" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="payingBankBranchCd" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rCurrency" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="localAmount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="serviceCharge" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rCommission" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="exchangeRate" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="refNo" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRemoteLocalRemitResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBankRequest">
+    <wsdl:part name="parameters" element="ns:GetBank" />
+  </wsdl:message>
+  <wsdl:message name="GetBankResponse">
+    <wsdl:part name="parameters" element="ns:GetBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchRequest">
+    <wsdl:part name="parameters" element="ns:GetBranch" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchResponse">
+    <wsdl:part name="parameters" element="ns:GetBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReDownloadRemoteThirdBankRemitRequest">
+    <wsdl:part name="parameters" element="ns:ReDownloadRemoteThirdBankRemit" />
+  </wsdl:message>
+  <wsdl:message name="ReDownloadRemoteThirdBankRemitResponse">
+    <wsdl:part name="parameters" element="ns:ReDownloadRemoteThirdBankRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteRemitRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteRemit" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteRemitResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTransactionDetailStatusRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteTransactionDetailStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTransactionDetailStatusResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteTransactionDetailStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRemoteLocalRemitRequest">
+    <wsdl:part name="parameters" element="ns:AddRemoteLocalRemit" />
+  </wsdl:message>
+  <wsdl:message name="AddRemoteLocalRemitResponse">
+    <wsdl:part name="parameters" element="ns:AddRemoteLocalRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteFxRateRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteFxRate" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteFxRateResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteFxRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRemoteRemitRequest">
+    <wsdl:part name="parameters" element="ns:ProcessRemoteRemit" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRemoteRemitResponse">
+    <wsdl:part name="parameters" element="ns:ProcessRemoteRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadRemoteThirdBankRemitRequest">
+    <wsdl:part name="parameters" element="ns:DownloadRemoteThirdBankRemit" />
+  </wsdl:message>
+  <wsdl:message name="DownloadRemoteThirdBankRemitResponse">
+    <wsdl:part name="parameters" element="ns:DownloadRemoteThirdBankRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmendRemoteTxnRequest">
+    <wsdl:part name="parameters" element="ns:AmendRemoteTxn" />
+  </wsdl:message>
+  <wsdl:message name="AmendRemoteTxnResponse">
+    <wsdl:part name="parameters" element="ns:AmendRemoteTxnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessThirdPartyRequest">
+    <wsdl:part name="parameters" element="ns:ProcessThirdParty" />
+  </wsdl:message>
+  <wsdl:message name="ProcessThirdPartyResponse">
+    <wsdl:part name="parameters" element="ns:ProcessThirdPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkDownloadedThirdBankRemitRequest">
+    <wsdl:part name="parameters" element="ns:MarkDownloadedThirdBankRemit" />
+  </wsdl:message>
+  <wsdl:message name="MarkDownloadedThirdBankRemitResponse">
+    <wsdl:part name="parameters" element="ns:MarkDownloadedThirdBankRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCashExpressRemitRequest">
+    <wsdl:part name="parameters" element="ns:ProcessCashExpressRemit" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCashExpressRemitResponse">
+    <wsdl:part name="parameters" element="ns:ProcessCashExpressRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteStatusDetailRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteStatusDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteStatusDetailResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteStatusDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetThirdPartyRequest">
+    <wsdl:part name="parameters" element="ns:GetThirdParty" />
+  </wsdl:message>
+  <wsdl:message name="GetThirdPartyResponse">
+    <wsdl:part name="parameters" element="ns:GetThirdPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentRequest">
+    <wsdl:part name="parameters" element="ns:GetAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentResponse">
+    <wsdl:part name="parameters" element="ns:GetAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteStatusRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteStatusResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelRemoteRemitRequest">
+    <wsdl:part name="parameters" element="ns:CancelRemoteRemit" />
+  </wsdl:message>
+  <wsdl:message name="CancelRemoteRemitResponse">
+    <wsdl:part name="parameters" element="ns:CancelRemoteRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteVostroAccDetailRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteVostroAccDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteVostroAccDetailResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteVostroAccDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCashExpressRemitRequest">
+    <wsdl:part name="parameters" element="ns:GetCashExpressRemit" />
+  </wsdl:message>
+  <wsdl:message name="GetCashExpressRemitResponse">
+    <wsdl:part name="parameters" element="ns:GetCashExpressRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteLocalStatusRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteLocalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteLocalStatusResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteLocalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRemoteRemitRequest">
+    <wsdl:part name="parameters" element="ns:AddRemoteRemit" />
+  </wsdl:message>
+  <wsdl:message name="AddRemoteRemitResponse">
+    <wsdl:part name="parameters" element="ns:AddRemoteRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRemoteThirdBankRemitRequest">
+    <wsdl:part name="parameters" element="ns:ProcessRemoteThirdBankRemit" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRemoteThirdBankRemitResponse">
+    <wsdl:part name="parameters" element="ns:ProcessRemoteThirdBankRemitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionRequest">
+    <wsdl:part name="parameters" element="ns:GetRegion" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionResponse">
+    <wsdl:part name="parameters" element="ns:GetRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTransactionDetailRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteTransactionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTransactionDetailResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteTransactionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteAccountDetailRequest">
+    <wsdl:part name="parameters" element="ns:GetRemoteAccountDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteAccountDetailResponse">
+    <wsdl:part name="parameters" element="ns:GetRemoteAccountDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RemoteRemitPortType">
+    <wsdl:operation name="GetBank">
+      <wsdl:input wsaw:Action="urn:GetBank" message="ns:GetBankRequest" />
+      <wsdl:output wsaw:Action="urn:GetBankResponse" message="ns:GetBankResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <wsdl:input wsaw:Action="urn:GetBranch" message="ns:GetBranchRequest" />
+      <wsdl:output wsaw:Action="urn:GetBranchResponse" message="ns:GetBranchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ReDownloadRemoteThirdBankRemit">
+      <wsdl:input wsaw:Action="urn:ReDownloadRemoteThirdBankRemit" message="ns:ReDownloadRemoteThirdBankRemitRequest" />
+      <wsdl:output wsaw:Action="urn:ReDownloadRemoteThirdBankRemitResponse" message="ns:ReDownloadRemoteThirdBankRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteRemit">
+      <wsdl:input wsaw:Action="urn:GetRemoteRemit" message="ns:GetRemoteRemitRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteRemitResponse" message="ns:GetRemoteRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetailStatus">
+      <wsdl:input wsaw:Action="urn:GetRemoteTransactionDetailStatus" message="ns:GetRemoteTransactionDetailStatusRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteTransactionDetailStatusResponse" message="ns:GetRemoteTransactionDetailStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteLocalRemit">
+      <wsdl:input wsaw:Action="urn:AddRemoteLocalRemit" message="ns:AddRemoteLocalRemitRequest" />
+      <wsdl:output wsaw:Action="urn:AddRemoteLocalRemitResponse" message="ns:AddRemoteLocalRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteFxRate">
+      <wsdl:input wsaw:Action="urn:GetRemoteFxRate" message="ns:GetRemoteFxRateRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteFxRateResponse" message="ns:GetRemoteFxRateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteRemit">
+      <wsdl:input wsaw:Action="urn:ProcessRemoteRemit" message="ns:ProcessRemoteRemitRequest" />
+      <wsdl:output wsaw:Action="urn:ProcessRemoteRemitResponse" message="ns:ProcessRemoteRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRemoteThirdBankRemit">
+      <wsdl:input wsaw:Action="urn:DownloadRemoteThirdBankRemit" message="ns:DownloadRemoteThirdBankRemitRequest" />
+      <wsdl:output wsaw:Action="urn:DownloadRemoteThirdBankRemitResponse" message="ns:DownloadRemoteThirdBankRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AmendRemoteTxn">
+      <wsdl:input wsaw:Action="urn:AmendRemoteTxn" message="ns:AmendRemoteTxnRequest" />
+      <wsdl:output wsaw:Action="urn:AmendRemoteTxnResponse" message="ns:AmendRemoteTxnResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessThirdParty">
+      <wsdl:input wsaw:Action="urn:ProcessThirdParty" message="ns:ProcessThirdPartyRequest" />
+      <wsdl:output wsaw:Action="urn:ProcessThirdPartyResponse" message="ns:ProcessThirdPartyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkDownloadedThirdBankRemit">
+      <wsdl:input wsaw:Action="urn:MarkDownloadedThirdBankRemit" message="ns:MarkDownloadedThirdBankRemitRequest" />
+      <wsdl:output wsaw:Action="urn:MarkDownloadedThirdBankRemitResponse" message="ns:MarkDownloadedThirdBankRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashExpressRemit">
+      <wsdl:input wsaw:Action="urn:ProcessCashExpressRemit" message="ns:ProcessCashExpressRemitRequest" />
+      <wsdl:output wsaw:Action="urn:ProcessCashExpressRemitResponse" message="ns:ProcessCashExpressRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatusDetail">
+      <wsdl:input wsaw:Action="urn:GetRemoteStatusDetail" message="ns:GetRemoteStatusDetailRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteStatusDetailResponse" message="ns:GetRemoteStatusDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThirdParty">
+      <wsdl:input wsaw:Action="urn:GetThirdParty" message="ns:GetThirdPartyRequest" />
+      <wsdl:output wsaw:Action="urn:GetThirdPartyResponse" message="ns:GetThirdPartyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgent">
+      <wsdl:input wsaw:Action="urn:GetAgent" message="ns:GetAgentRequest" />
+      <wsdl:output wsaw:Action="urn:GetAgentResponse" message="ns:GetAgentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatus">
+      <wsdl:input wsaw:Action="urn:GetRemoteStatus" message="ns:GetRemoteStatusRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteStatusResponse" message="ns:GetRemoteStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRemoteRemit">
+      <wsdl:input wsaw:Action="urn:CancelRemoteRemit" message="ns:CancelRemoteRemitRequest" />
+      <wsdl:output wsaw:Action="urn:CancelRemoteRemitResponse" message="ns:CancelRemoteRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteVostroAccDetail">
+      <wsdl:input wsaw:Action="urn:GetRemoteVostroAccDetail" message="ns:GetRemoteVostroAccDetailRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteVostroAccDetailResponse" message="ns:GetRemoteVostroAccDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCashExpressRemit">
+      <wsdl:input wsaw:Action="urn:GetCashExpressRemit" message="ns:GetCashExpressRemitRequest" />
+      <wsdl:output wsaw:Action="urn:GetCashExpressRemitResponse" message="ns:GetCashExpressRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteLocalStatus">
+      <wsdl:input wsaw:Action="urn:GetRemoteLocalStatus" message="ns:GetRemoteLocalStatusRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteLocalStatusResponse" message="ns:GetRemoteLocalStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteRemit">
+      <wsdl:input wsaw:Action="urn:AddRemoteRemit" message="ns:AddRemoteRemitRequest" />
+      <wsdl:output wsaw:Action="urn:AddRemoteRemitResponse" message="ns:AddRemoteRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteThirdBankRemit">
+      <wsdl:input wsaw:Action="urn:ProcessRemoteThirdBankRemit" message="ns:ProcessRemoteThirdBankRemitRequest" />
+      <wsdl:output wsaw:Action="urn:ProcessRemoteThirdBankRemitResponse" message="ns:ProcessRemoteThirdBankRemitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input wsaw:Action="urn:GetRegion" message="ns:GetRegionRequest" />
+      <wsdl:output wsaw:Action="urn:GetRegionResponse" message="ns:GetRegionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetail">
+      <wsdl:input wsaw:Action="urn:GetRemoteTransactionDetail" message="ns:GetRemoteTransactionDetailRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteTransactionDetailResponse" message="ns:GetRemoteTransactionDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteAccountDetail">
+      <wsdl:input wsaw:Action="urn:GetRemoteAccountDetail" message="ns:GetRemoteAccountDetailRequest" />
+      <wsdl:output wsaw:Action="urn:GetRemoteAccountDetailResponse" message="ns:GetRemoteAccountDetailResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RemoteRemitSoap11Binding" type="ns:RemoteRemitPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReDownloadRemoteThirdBankRemit">
+      <soap:operation soapAction="urn:ReDownloadRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <soap:operation soapAction="urn:GetBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBank">
+      <soap:operation soapAction="urn:GetBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteRemit">
+      <soap:operation soapAction="urn:GetRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetailStatus">
+      <soap:operation soapAction="urn:GetRemoteTransactionDetailStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteLocalRemit">
+      <soap:operation soapAction="urn:AddRemoteLocalRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteFxRate">
+      <soap:operation soapAction="urn:GetRemoteFxRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteRemit">
+      <soap:operation soapAction="urn:ProcessRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRemoteThirdBankRemit">
+      <soap:operation soapAction="urn:DownloadRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendRemoteTxn">
+      <soap:operation soapAction="urn:AmendRemoteTxn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessThirdParty">
+      <soap:operation soapAction="urn:ProcessThirdParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashExpressRemit">
+      <soap:operation soapAction="urn:ProcessCashExpressRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkDownloadedThirdBankRemit">
+      <soap:operation soapAction="urn:MarkDownloadedThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatusDetail">
+      <soap:operation soapAction="urn:GetRemoteStatusDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThirdParty">
+      <soap:operation soapAction="urn:GetThirdParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatus">
+      <soap:operation soapAction="urn:GetRemoteStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgent">
+      <soap:operation soapAction="urn:GetAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteVostroAccDetail">
+      <soap:operation soapAction="urn:GetRemoteVostroAccDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRemoteRemit">
+      <soap:operation soapAction="urn:CancelRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteLocalStatus">
+      <soap:operation soapAction="urn:GetRemoteLocalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashExpressRemit">
+      <soap:operation soapAction="urn:GetCashExpressRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteRemit">
+      <soap:operation soapAction="urn:AddRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteThirdBankRemit">
+      <soap:operation soapAction="urn:ProcessRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap:operation soapAction="urn:GetRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetail">
+      <soap:operation soapAction="urn:GetRemoteTransactionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteAccountDetail">
+      <soap:operation soapAction="urn:GetRemoteAccountDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RemoteRemitSoap12Binding" type="ns:RemoteRemitPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReDownloadRemoteThirdBankRemit">
+      <soap12:operation soapAction="urn:ReDownloadRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <soap12:operation soapAction="urn:GetBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBank">
+      <soap12:operation soapAction="urn:GetBank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteRemit">
+      <soap12:operation soapAction="urn:GetRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetailStatus">
+      <soap12:operation soapAction="urn:GetRemoteTransactionDetailStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteLocalRemit">
+      <soap12:operation soapAction="urn:AddRemoteLocalRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteFxRate">
+      <soap12:operation soapAction="urn:GetRemoteFxRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteRemit">
+      <soap12:operation soapAction="urn:ProcessRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRemoteThirdBankRemit">
+      <soap12:operation soapAction="urn:DownloadRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendRemoteTxn">
+      <soap12:operation soapAction="urn:AmendRemoteTxn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessThirdParty">
+      <soap12:operation soapAction="urn:ProcessThirdParty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashExpressRemit">
+      <soap12:operation soapAction="urn:ProcessCashExpressRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkDownloadedThirdBankRemit">
+      <soap12:operation soapAction="urn:MarkDownloadedThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatusDetail">
+      <soap12:operation soapAction="urn:GetRemoteStatusDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThirdParty">
+      <soap12:operation soapAction="urn:GetThirdParty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatus">
+      <soap12:operation soapAction="urn:GetRemoteStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgent">
+      <soap12:operation soapAction="urn:GetAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteVostroAccDetail">
+      <soap12:operation soapAction="urn:GetRemoteVostroAccDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRemoteRemit">
+      <soap12:operation soapAction="urn:CancelRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteLocalStatus">
+      <soap12:operation soapAction="urn:GetRemoteLocalStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashExpressRemit">
+      <soap12:operation soapAction="urn:GetCashExpressRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteRemit">
+      <soap12:operation soapAction="urn:AddRemoteRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteThirdBankRemit">
+      <soap12:operation soapAction="urn:ProcessRemoteThirdBankRemit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap12:operation soapAction="urn:GetRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetail">
+      <soap12:operation soapAction="urn:GetRemoteTransactionDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteAccountDetail">
+      <soap12:operation soapAction="urn:GetRemoteAccountDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RemoteRemitHttpBinding" type="ns:RemoteRemitPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ReDownloadRemoteThirdBankRemit">
+      <http:operation location="ReDownloadRemoteThirdBankRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <http:operation location="GetBranch" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBank">
+      <http:operation location="GetBank" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteRemit">
+      <http:operation location="GetRemoteRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetailStatus">
+      <http:operation location="GetRemoteTransactionDetailStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteLocalRemit">
+      <http:operation location="AddRemoteLocalRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteFxRate">
+      <http:operation location="GetRemoteFxRate" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteRemit">
+      <http:operation location="ProcessRemoteRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadRemoteThirdBankRemit">
+      <http:operation location="DownloadRemoteThirdBankRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendRemoteTxn">
+      <http:operation location="AmendRemoteTxn" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessThirdParty">
+      <http:operation location="ProcessThirdParty" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCashExpressRemit">
+      <http:operation location="ProcessCashExpressRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkDownloadedThirdBankRemit">
+      <http:operation location="MarkDownloadedThirdBankRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatusDetail">
+      <http:operation location="GetRemoteStatusDetail" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThirdParty">
+      <http:operation location="GetThirdParty" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteStatus">
+      <http:operation location="GetRemoteStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgent">
+      <http:operation location="GetAgent" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteVostroAccDetail">
+      <http:operation location="GetRemoteVostroAccDetail" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRemoteRemit">
+      <http:operation location="CancelRemoteRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteLocalStatus">
+      <http:operation location="GetRemoteLocalStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashExpressRemit">
+      <http:operation location="GetCashExpressRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemoteRemit">
+      <http:operation location="AddRemoteRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRemoteThirdBankRemit">
+      <http:operation location="ProcessRemoteThirdBankRemit" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <http:operation location="GetRegion" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTransactionDetail">
+      <http:operation location="GetRemoteTransactionDetail" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteAccountDetail">
+      <http:operation location="GetRemoteAccountDetail" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RemoteRemit">
+    <wsdl:port name="RemoteRemitHttpSoap11Endpoint" binding="ns:RemoteRemitSoap11Binding">
+      <soap:address location="http://103.19.88.222/globalWebService/services/RemoteRemit.RemoteRemitHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="RemoteRemitHttpSoap12Endpoint" binding="ns:RemoteRemitSoap12Binding">
+      <soap12:address location="http://103.19.88.222/globalWebService/services/RemoteRemit.RemoteRemitHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="RemoteRemitHttpEndpoint" binding="ns:RemoteRemitHttpBinding">
+      <http:address location="http://103.19.88.222/globalWebService/services/RemoteRemit.RemoteRemitHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

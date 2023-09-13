@@ -1,0 +1,86 @@
+.receipt * {
+    font-size: 11px;
+}
+
+.receipt p {
+    font-size: 11px;
+    padding: 1px 0;
+    margin: 0;
+    line-height: 10px;
+}
+
+
+.receipt td {
+    /*padding: 0 5px;*/
+    margin: 0;
+    line-height: 14px;
+}
+
+.receipt p {
+}
+
+.receipt .logo {
+    width: 300px;
+}
+
+    .receipt .logo img {
+        width: 100%;
+    }
+
+.receipt h2,
+.receipt h2 span {
+    padding: 0;
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.receipt h3 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    margin: 3px 0;
+}
+
+    .receipt h3 span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+.receipt .copy p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff0000;
+    text-align: left
+}
+
+.receipt label {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.receipt .sender-value {
+    text-transform: uppercase;
+}
+
+.receipt .amount-info table {
+    border-collapse: collapse;
+}
+
+.receipt .details h4 {
+    margin: 4px 0;
+    font-weight: 600;
+}
+
+@media print {
+    .receipt .footer {
+        page-break-after: always;
+    }
+
+    .receipt .no-margin {
+        margin-top: 0% !important;
+    }
+}
+
+.receipt .details h4 {
+    margin: 4px 0;
+}
